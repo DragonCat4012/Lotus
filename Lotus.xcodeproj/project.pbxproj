@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F19BBF202A682F930030F090 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19BBF1F2A682F930030F090 /* CalendarView.swift */; };
+		F19BBF242A6833EC0030F090 /* StatsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19BBF232A6833EC0030F090 /* StatsScreen.swift */; };
 		F19E69292A68109B0018E2CE /* LotusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19E69282A68109B0018E2CE /* LotusApp.swift */; };
 		F19E692B2A68109B0018E2CE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19E692A2A68109B0018E2CE /* ContentView.swift */; };
 		F19E692D2A68109C0018E2CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F19E692C2A68109C0018E2CE /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		F19BBF1F2A682F930030F090 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		F19BBF232A6833EC0030F090 /* StatsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsScreen.swift; sourceTree = "<group>"; };
 		F19E69252A68109B0018E2CE /* Lotus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lotus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F19E69282A68109B0018E2CE /* LotusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotusApp.swift; sourceTree = "<group>"; };
 		F19E692A2A68109B0018E2CE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			children = (
 				F19E692A2A68109B0018E2CE /* ContentView.swift */,
 				F19E69582A6813340018E2CE /* RootView.swift */,
+				F19BBF232A6833EC0030F090 /* StatsScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				F19E69352A68109C0018E2CE /* Lotus.xcdatamodeld in Sources */,
 				F19E692B2A68109B0018E2CE /* ContentView.swift in Sources */,
 				F19E69292A68109B0018E2CE /* LotusApp.swift in Sources */,
+				F19BBF242A6833EC0030F090 /* StatsScreen.swift in Sources */,
 				F19E695D2A68155B0018E2CE /* ColorExtension.swift in Sources */,
 				F19E69592A6813340018E2CE /* RootView.swift in Sources */,
 			);

@@ -9,6 +9,7 @@ import SwiftUI
 import CoreData
 
 struct RootView: View {
+    @State var isStatsScreenPresented = false
     
     var body: some View {
         NavigationView {
@@ -35,7 +36,9 @@ struct RootView: View {
                     
                 }.ignoresSafeArea()
             }.ignoresSafeArea()
-            
+                .sheet(isPresented: $isStatsScreenPresented){
+                    StatsScreen()
+                }
         }.navigationTitle("hmmm")
     }
     
@@ -66,7 +69,7 @@ struct RootView: View {
     func buttons() -> some View {
         VStack {
             Button {
-                
+                isStatsScreenPresented = true
             } label: {
                 Text("Stats")
             }.buttonStyle(PrimaryStyle())
