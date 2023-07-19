@@ -16,27 +16,45 @@ struct CalendarView: View {
                 .frame(height: 150)
             
                 .overlay {
-                    VStack(spacing: 1) {
+                    VStack(alignment: .leading) {
                         ForEach(0..<11) { i in
-                            month()
+                            month(i)
                         }
                     }
                 }
-            
-          
-     
         }.frame(height: 150)
     }
     
-    func month() -> some View {
-        HStack {
-            ForEach(0..<30) { i in
+    func month(_ month: Int) -> some View {
+        HStack(spacing: 2) {
+            ForEach(0..<getDaysInMonth(month: month, year: 20)) { i in
                 RoundedRectangle(cornerRadius: 2)
+                    .fill(Color.primary)
                     .frame(width: 5, height: 5)
-                        }
-            Spacer()
-            Text("ABC")
-        }.padding(.horizontal)
-            .frame(height: 150/12 - 20)
+            }
+        }.padding(.horizontal, 5)
     }
 }
+
+func getDaysInMonth(month: Int, year: Int) -> Int {
+        let calendar = Calendar.current
+
+        var startComps = DateComponents()
+        startComps.day = 1
+        startComps.month = month
+        startComps.year = year
+
+        var endComps = DateComponents()
+        endComps.day = 1
+        endComps.month = month == 12 ? 1 : month + 1
+        endComps.year = month == 12 ? year + 1 : year
+
+        
+        let startDate = calendar.date(from: startComps)!
+        let endDate = calendar.date(from:endComps)!
+
+        
+        let diff = calendar.dateComponents([Calendar.Component.day], from: startDate, to: endDate)
+
+        return diff.day ?? 1
+    }
