@@ -12,9 +12,12 @@ struct CalendarView: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 8)
-                .fill(Color.black.opacity(0.5))
+                .fill(Color.black.opacity(0.4))
                 .frame(height: 150)
-            
+                .overlay(
+                            RoundedRectangle(cornerRadius: 8)
+                                .stroke(Color.black.opacity(0.6), lineWidth: 1)
+                        )
                 .overlay {
                     VStack(alignment: .leading) {
                         ForEach(0..<11) { i in
@@ -29,7 +32,7 @@ struct CalendarView: View {
         HStack(spacing: 2) {
             ForEach(0..<getDaysInMonth(month: month, year: 20)) { i in
                 RoundedRectangle(cornerRadius: 2)
-                    .fill(Color.primary)
+                    .fill(Color.secondary)
                     .frame(width: 5, height: 5)
             }
         }.padding(.horizontal, 5)
