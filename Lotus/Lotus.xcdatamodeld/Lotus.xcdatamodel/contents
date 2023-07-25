@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22A8381" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
-    <entity name="Item" representedClassName="Item" syncable="YES">
+    <entity name="Entry" representedClassName="Entry" syncable="YES">
         <attribute name="timestamp" attributeType="Date" defaultDateTimeInterval="711985560" usesScalarValueType="NO"/>
         <attribute name="value" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="year" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Year" inverseName="items" inverseEntity="Year"/>
@@ -11,6 +11,6 @@
     </entity>
     <entity name="Year" representedClassName="Year" syncable="YES">
         <attribute name="year" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="year" inverseEntity="Item"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Entry" inverseName="year" inverseEntity="Entry"/>
     </entity>
 </model>

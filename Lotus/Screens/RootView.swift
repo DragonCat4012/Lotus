@@ -46,6 +46,9 @@ struct RootView: View {
         HStack {
             Button("+") {
                 
+                CoreData.addItem(date: Date(), type: 0)
+                // TODO: chekc that its a valid type
+                
             }.buttonStyle(PrimaryStyle()).frame(width: 50)
             
             Spacer()
@@ -96,6 +99,6 @@ struct RootView: View {
 
 struct RootView_Previews: PreviewProvider {
     static var previews: some View {
-        RootView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        RootView()
     }
 }

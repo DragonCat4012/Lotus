@@ -12,7 +12,6 @@
 		F19E69292A68109B0018E2CE /* LotusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19E69282A68109B0018E2CE /* LotusApp.swift */; };
 		F19E692D2A68109C0018E2CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F19E692C2A68109C0018E2CE /* Assets.xcassets */; };
 		F19E69302A68109C0018E2CE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F19E692F2A68109C0018E2CE /* Preview Assets.xcassets */; };
-		F19E69322A68109C0018E2CE /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19E69312A68109C0018E2CE /* Persistence.swift */; };
 		F19E69352A68109C0018E2CE /* Lotus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F19E69332A68109C0018E2CE /* Lotus.xcdatamodeld */; };
 		F19E69402A68109D0018E2CE /* LotusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19E693F2A68109D0018E2CE /* LotusTests.swift */; };
 		F19E694A2A68109D0018E2CE /* LotusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19E69492A68109D0018E2CE /* LotusUITests.swift */; };
@@ -26,8 +25,9 @@
 		F1A61ECE2A70096D006E7382 /* Year+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61EC82A70096D006E7382 /* Year+CoreDataProperties.swift */; };
 		F1A61ECF2A70096D006E7382 /* Type+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61EC92A70096D006E7382 /* Type+CoreDataClass.swift */; };
 		F1A61ED02A70096D006E7382 /* Type+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61ECA2A70096D006E7382 /* Type+CoreDataProperties.swift */; };
-		F1A61ED12A70096D006E7382 /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61ECB2A70096D006E7382 /* Item+CoreDataClass.swift */; };
-		F1A61ED22A70096D006E7382 /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61ECC2A70096D006E7382 /* Item+CoreDataProperties.swift */; };
+		F1A61ED42A7012CD006E7382 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61ED32A7012CD006E7382 /* Date.swift */; };
+		F1A61ED82A701572006E7382 /* Entry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61ED62A701572006E7382 /* Entry+CoreDataClass.swift */; };
+		F1A61ED92A701572006E7382 /* Entry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61ED72A701572006E7382 /* Entry+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +54,6 @@
 		F19E69282A68109B0018E2CE /* LotusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotusApp.swift; sourceTree = "<group>"; };
 		F19E692C2A68109C0018E2CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F19E692F2A68109C0018E2CE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		F19E69312A68109C0018E2CE /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		F19E69342A68109C0018E2CE /* Lotus.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Lotus.xcdatamodel; sourceTree = "<group>"; };
 		F19E69362A68109C0018E2CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F19E693B2A68109D0018E2CE /* LotusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LotusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,8 +70,10 @@
 		F1A61EC82A70096D006E7382 /* Year+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Year+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		F1A61EC92A70096D006E7382 /* Type+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Type+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		F1A61ECA2A70096D006E7382 /* Type+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Type+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		F1A61ECB2A70096D006E7382 /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		F1A61ECC2A70096D006E7382 /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		F1A61ED32A7012CD006E7382 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		F1A61ED52A70151A006E7382 /* Lotus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lotus.entitlements; sourceTree = "<group>"; };
+		F1A61ED62A701572006E7382 /* Entry+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		F1A61ED72A701572006E7382 /* Entry+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +141,7 @@
 		F19E69272A68109B0018E2CE /* Lotus */ = {
 			isa = PBXGroup;
 			children = (
+				F1A61ED52A70151A006E7382 /* Lotus.entitlements */,
 				F1A61EC12A7008E2006E7382 /* Util */,
 				F19BBF222A682FA50030F090 /* Screens */,
 				F19BBF212A682F990030F090 /* UI Components */,
@@ -147,7 +149,6 @@
 				F19E695E2A6815770018E2CE /* Sytles */,
 				F19E69282A68109B0018E2CE /* LotusApp.swift */,
 				F19E692C2A68109C0018E2CE /* Assets.xcassets */,
-				F19E69312A68109C0018E2CE /* Persistence.swift */,
 				F19E69362A68109C0018E2CE /* Info.plist */,
 				F19E69332A68109C0018E2CE /* Lotus.xcdatamodeld */,
 				F19E692E2A68109C0018E2CE /* Preview Content */,
@@ -192,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				F19E695C2A68155B0018E2CE /* ColorExtension.swift */,
+				F1A61ED32A7012CD006E7382 /* Date.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -209,12 +211,12 @@
 		F1A61EC62A700961006E7382 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				F1A61ED62A701572006E7382 /* Entry+CoreDataClass.swift */,
+				F1A61ED72A701572006E7382 /* Entry+CoreDataProperties.swift */,
 				F1A61EC72A70096D006E7382 /* Year+CoreDataClass.swift */,
 				F1A61EC82A70096D006E7382 /* Year+CoreDataProperties.swift */,
 				F1A61EC92A70096D006E7382 /* Type+CoreDataClass.swift */,
 				F1A61ECA2A70096D006E7382 /* Type+CoreDataProperties.swift */,
-				F1A61ECB2A70096D006E7382 /* Item+CoreDataClass.swift */,
-				F1A61ECC2A70096D006E7382 /* Item+CoreDataProperties.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -351,11 +353,11 @@
 			files = (
 				F1A61ED02A70096D006E7382 /* Type+CoreDataProperties.swift in Sources */,
 				F1A61ECD2A70096D006E7382 /* Year+CoreDataClass.swift in Sources */,
-				F19E69322A68109C0018E2CE /* Persistence.swift in Sources */,
 				F19E695B2A6813840018E2CE /* ButtonStyles.swift in Sources */,
+				F1A61ED82A701572006E7382 /* Entry+CoreDataClass.swift in Sources */,
 				F19BBF202A682F930030F090 /* CalendarView.swift in Sources */,
 				F1A61ECE2A70096D006E7382 /* Year+CoreDataProperties.swift in Sources */,
-				F1A61ED12A70096D006E7382 /* Item+CoreDataClass.swift in Sources */,
+				F1A61ED42A7012CD006E7382 /* Date.swift in Sources */,
 				F19E69352A68109C0018E2CE /* Lotus.xcdatamodeld in Sources */,
 				F1A61EC32A7008F2006E7382 /* CoreDataStack.swift in Sources */,
 				F19E69292A68109B0018E2CE /* LotusApp.swift in Sources */,
@@ -363,7 +365,7 @@
 				F19E695D2A68155B0018E2CE /* ColorExtension.swift in Sources */,
 				F1A61ECF2A70096D006E7382 /* Type+CoreDataClass.swift in Sources */,
 				F19E69592A6813340018E2CE /* RootView.swift in Sources */,
-				F1A61ED22A70096D006E7382 /* Item+CoreDataProperties.swift in Sources */,
+				F1A61ED92A701572006E7382 /* Entry+CoreDataProperties.swift in Sources */,
 				F1A61EC52A70093C006E7382 /* CoreDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,6 +522,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Lotus/Lotus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Lotus/Preview Content\"";
@@ -549,6 +552,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Lotus/Lotus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Lotus/Preview Content\"";

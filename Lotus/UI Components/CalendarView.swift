@@ -9,6 +9,8 @@ import SwiftUI
 
 
 struct CalendarView: View {
+    @State var year: Year = CoreData.getLatestYear()
+    
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 8)
@@ -30,12 +32,29 @@ struct CalendarView: View {
     
     func month(_ month: Int) -> some View {
         HStack(spacing: 2) {
-            ForEach(0..<getDaysInMonth(month: month, year: 20)) { i in
+            ForEach(0..<getDaysInMonth(month: month, year: Int(year.year))) { i in
                 RoundedRectangle(cornerRadius: 2)
-                    .fill(Color.secondary)
+                    .fill(getColorForDay(i, month))
                     .frame(width: 5, height: 5)
             }
         }.padding(.horizontal, 5)
+    }
+    
+    func getColorForDay(_ day: Int, _ month: Int) -> Color {
+        let items = CoreData.getItemsOfAYear(year: year)
+        
+        var components = DateComponents()
+        components.year = Int(year.year)
+        components.month = month
+        components.day = day
+        let targetDate = Calendar.current.date(from: components)!.cleanDate()
+        
+        let item = items.filter{ $0.timestamp.cleanDate() == targetDate}
+        if item.first != nil {
+            return Color.secondary
+        } else {
+            return Color.white.opacity(0.2)
+        }
     }
 }
 

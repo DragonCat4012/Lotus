@@ -17,7 +17,7 @@ extension Year {
     }
 
     @NSManaged public var year: Int64
-    @NSManaged public var items: NSSet?
+    @NSManaged public var items: NSSet
 
 }
 
@@ -25,10 +25,10 @@ extension Year {
 extension Year {
 
     @objc(addItemsObject:)
-    @NSManaged public func addToItems(_ value: Item)
+    @NSManaged public func addToItems(_ value: Entry)
 
     @objc(removeItemsObject:)
-    @NSManaged public func removeFromItems(_ value: Item)
+    @NSManaged public func removeFromItems(_ value: Entry)
 
     @objc(addItems:)
     @NSManaged public func addToItems(_ values: NSSet)

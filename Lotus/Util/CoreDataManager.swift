@@ -33,8 +33,10 @@ struct CoreData {
             arr = try context.fetch(Year.fetchRequest())
             
             if arr.isEmpty {
-                // TODO: generate default types & append to arr
+                let newYear = Year(context: context)
+                newYear.year = Int64(Calendar.current.component(.year, from: Date()))
                 try! context.save()
+                arr.append(newYear)
                 return arr
             }
             return arr
@@ -44,19 +46,19 @@ struct CoreData {
         return arr
     }
     
-    static func getItemsOfAYear(year: Year) -> [Item] {
-        return (year.items?.allObjects as? [Item])!
+    static func getItemsOfAYear(year: Year) -> [Entry] {
+        return (year.items.allObjects as? [Entry])!
     }
     
-    static func addItem(year: Year, date: Date, type: Int64) {
-        var newItem = Item(context: context)
-        newItem.timestamp = date
+    static func addItem(year: Year = getLatestYear(), date: Date, type: Int64) {
+        let newItem = Entry(context: context)
+        newItem.timestamp = date.cleanDate()
         newItem.value = type
         year.addToItems(newItem)
         try! context.save()
     }
     
-    static func removeItem(item: Item) {
+    static func removeItem(item: Entry) {
         do {
             context.delete(item)
             try context.save()
@@ -81,7 +83,7 @@ struct CoreData {
         newItem.color = color
         
         repeat {
-          num += 1
+            num += 1
         } while (assignedInts.contains(num))
         
         newItem.rawValue = num
@@ -99,8 +101,16 @@ struct CoreData {
         //TODO: remove all items with this type
     }
     
+    static func getLatestYear() -> Year {
+        let years = getYears()
+        if years.isEmpty {
+            assertionFailure("No current year")
+        }
+        return years.sorted(by: { $0.year > $1.year}).first!
+    }
+    
+    // MARK: util funcs
     static func log(_ content: String) {
         print("[CoreData] ", content)
     }
-    
 }
