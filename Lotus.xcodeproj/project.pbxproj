@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F10CDF7E2A7019C400DD2F88 /* AddEntryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CDF7D2A7019C400DD2F88 /* AddEntryScreen.swift */; };
 		F19BBF202A682F930030F090 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19BBF1F2A682F930030F090 /* CalendarView.swift */; };
 		F19BBF242A6833EC0030F090 /* StatsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19BBF232A6833EC0030F090 /* StatsScreen.swift */; };
 		F19E69292A68109B0018E2CE /* LotusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19E69282A68109B0018E2CE /* LotusApp.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F10CDF7D2A7019C400DD2F88 /* AddEntryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEntryScreen.swift; sourceTree = "<group>"; };
 		F19BBF1F2A682F930030F090 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		F19BBF232A6833EC0030F090 /* StatsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsScreen.swift; sourceTree = "<group>"; };
 		F19E69252A68109B0018E2CE /* Lotus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lotus.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +116,7 @@
 			children = (
 				F19E69582A6813340018E2CE /* RootView.swift */,
 				F19BBF232A6833EC0030F090 /* StatsScreen.swift */,
+				F10CDF7D2A7019C400DD2F88 /* AddEntryScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				F19E69292A68109B0018E2CE /* LotusApp.swift in Sources */,
 				F19BBF242A6833EC0030F090 /* StatsScreen.swift in Sources */,
 				F19E695D2A68155B0018E2CE /* ColorExtension.swift in Sources */,
+				F10CDF7E2A7019C400DD2F88 /* AddEntryScreen.swift in Sources */,
 				F1A61ECF2A70096D006E7382 /* Type+CoreDataClass.swift in Sources */,
 				F19E69592A6813340018E2CE /* RootView.swift in Sources */,
 				F1A61ED92A701572006E7382 /* Entry+CoreDataProperties.swift in Sources */,

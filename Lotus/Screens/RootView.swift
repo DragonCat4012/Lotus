@@ -10,6 +10,7 @@ import CoreData
 
 struct RootView: View {
     @State var isStatsScreenPresented = false
+    @State var isAddEntryScreenPresented = false
     
     var body: some View {
         NavigationView {
@@ -39,16 +40,16 @@ struct RootView: View {
                 .sheet(isPresented: $isStatsScreenPresented){
                     StatsScreen()
                 }
+                .sheet(isPresented: $isAddEntryScreenPresented){
+                    AddEntryScreen()
+                }
         }.navigationTitle("hmmm")
     }
     
     func actionRow() -> some View {
         HStack {
             Button("+") {
-                
-                CoreData.addItem(date: Date(), type: 0)
-                // TODO: chekc that its a valid type
-                
+               isAddEntryScreenPresented = true
             }.buttonStyle(PrimaryStyle()).frame(width: 50)
             
             Spacer()
