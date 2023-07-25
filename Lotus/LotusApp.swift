@@ -9,10 +9,12 @@ import SwiftUI
 
 @main
 struct LotusApp: App {
- 
+    @ObservedObject var vm = RootScreenModel()
+    
     var body: some Scene {
         WindowGroup {
             RootView()
+                .environmentObject(vm)
         }
     }
 }

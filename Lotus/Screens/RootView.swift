@@ -9,8 +9,7 @@ import SwiftUI
 import CoreData
 
 struct RootView: View {
-    @State var isStatsScreenPresented = false
-    @State var isAddEntryScreenPresented = false
+    @EnvironmentObject var vm: RootScreenModel
     
     var body: some View {
         NavigationView {
@@ -37,10 +36,10 @@ struct RootView: View {
                     
                 }.ignoresSafeArea()
             }.ignoresSafeArea()
-                .sheet(isPresented: $isStatsScreenPresented){
+                .sheet(isPresented: $vm.isStatsScreenPresented){
                     StatsScreen()
                 }
-                .sheet(isPresented: $isAddEntryScreenPresented){
+                .sheet(isPresented: $vm.isAddEntryScreenPresented){
                     AddEntryScreen()
                 }
         }.navigationTitle("hmmm")
@@ -49,7 +48,7 @@ struct RootView: View {
     func actionRow() -> some View {
         HStack {
             Button("+") {
-               isAddEntryScreenPresented = true
+                vm.isAddEntryScreenPresented = true
             }.buttonStyle(PrimaryStyle()).frame(width: 50)
             
             Spacer()
@@ -73,7 +72,7 @@ struct RootView: View {
     func buttons() -> some View {
         VStack {
             Button {
-                isStatsScreenPresented = true
+                vm.isStatsScreenPresented = true
             } label: {
                 Text("Stats")
             }.buttonStyle(PrimaryStyle())
@@ -101,5 +100,6 @@ struct RootView: View {
 struct RootView_Previews: PreviewProvider {
     static var previews: some View {
         RootView()
+            .environmentObject(RootScreenModel())
     }
 }
