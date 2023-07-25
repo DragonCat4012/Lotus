@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		F10CDF7E2A7019C400DD2F88 /* AddEntryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CDF7D2A7019C400DD2F88 /* AddEntryScreen.swift */; };
 		F10CDF802A701BBA00DD2F88 /* RootScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CDF7F2A701BBA00DD2F88 /* RootScreenModel.swift */; };
+		F10CDF822A701E9000DD2F88 /* YearSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CDF812A701E9000DD2F88 /* YearSelector.swift */; };
+		F10CDF842A70216F00DD2F88 /* RoundedViewCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CDF832A70216F00DD2F88 /* RoundedViewCorners.swift */; };
 		F19BBF202A682F930030F090 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19BBF1F2A682F930030F090 /* CalendarView.swift */; };
 		F19BBF242A6833EC0030F090 /* StatsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19BBF232A6833EC0030F090 /* StatsScreen.swift */; };
 		F19E69292A68109B0018E2CE /* LotusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19E69282A68109B0018E2CE /* LotusApp.swift */; };
@@ -18,7 +20,7 @@
 		F19E69402A68109D0018E2CE /* LotusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19E693F2A68109D0018E2CE /* LotusTests.swift */; };
 		F19E694A2A68109D0018E2CE /* LotusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19E69492A68109D0018E2CE /* LotusUITests.swift */; };
 		F19E694C2A68109D0018E2CE /* LotusUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19E694B2A68109D0018E2CE /* LotusUITestsLaunchTests.swift */; };
-		F19E69592A6813340018E2CE /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19E69582A6813340018E2CE /* RootView.swift */; };
+		F19E69592A6813340018E2CE /* RootScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19E69582A6813340018E2CE /* RootScreen.swift */; };
 		F19E695B2A6813840018E2CE /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19E695A2A6813840018E2CE /* ButtonStyles.swift */; };
 		F19E695D2A68155B0018E2CE /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19E695C2A68155B0018E2CE /* ColorExtension.swift */; };
 		F1A61EC32A7008F2006E7382 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61EC22A7008F2006E7382 /* CoreDataStack.swift */; };
@@ -52,6 +54,8 @@
 /* Begin PBXFileReference section */
 		F10CDF7D2A7019C400DD2F88 /* AddEntryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEntryScreen.swift; sourceTree = "<group>"; };
 		F10CDF7F2A701BBA00DD2F88 /* RootScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreenModel.swift; sourceTree = "<group>"; };
+		F10CDF812A701E9000DD2F88 /* YearSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearSelector.swift; sourceTree = "<group>"; };
+		F10CDF832A70216F00DD2F88 /* RoundedViewCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViewCorners.swift; sourceTree = "<group>"; };
 		F19BBF1F2A682F930030F090 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		F19BBF232A6833EC0030F090 /* StatsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsScreen.swift; sourceTree = "<group>"; };
 		F19E69252A68109B0018E2CE /* Lotus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lotus.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,7 +69,7 @@
 		F19E69452A68109D0018E2CE /* LotusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LotusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F19E69492A68109D0018E2CE /* LotusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotusUITests.swift; sourceTree = "<group>"; };
 		F19E694B2A68109D0018E2CE /* LotusUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotusUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		F19E69582A6813340018E2CE /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		F19E69582A6813340018E2CE /* RootScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreen.swift; sourceTree = "<group>"; };
 		F19E695A2A6813840018E2CE /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		F19E695C2A68155B0018E2CE /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		F1A61EC22A7008F2006E7382 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				F19BBF1F2A682F930030F090 /* CalendarView.swift */,
+				F10CDF812A701E9000DD2F88 /* YearSelector.swift */,
 			);
 			path = "UI Components";
 			sourceTree = "<group>";
@@ -116,7 +121,7 @@
 		F19BBF222A682FA50030F090 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				F19E69582A6813340018E2CE /* RootView.swift */,
+				F19E69582A6813340018E2CE /* RootScreen.swift */,
 				F19BBF232A6833EC0030F090 /* StatsScreen.swift */,
 				F10CDF7D2A7019C400DD2F88 /* AddEntryScreen.swift */,
 				F10CDF7F2A701BBA00DD2F88 /* RootScreenModel.swift */,
@@ -200,6 +205,7 @@
 			children = (
 				F19E695C2A68155B0018E2CE /* ColorExtension.swift */,
 				F1A61ED32A7012CD006E7382 /* Date.swift */,
+				F10CDF832A70216F00DD2F88 /* RoundedViewCorners.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -357,6 +363,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F10CDF822A701E9000DD2F88 /* YearSelector.swift in Sources */,
 				F1A61ED02A70096D006E7382 /* Type+CoreDataProperties.swift in Sources */,
 				F1A61ECD2A70096D006E7382 /* Year+CoreDataClass.swift in Sources */,
 				F19E695B2A6813840018E2CE /* ButtonStyles.swift in Sources */,
@@ -371,10 +378,11 @@
 				F19E695D2A68155B0018E2CE /* ColorExtension.swift in Sources */,
 				F10CDF7E2A7019C400DD2F88 /* AddEntryScreen.swift in Sources */,
 				F1A61ECF2A70096D006E7382 /* Type+CoreDataClass.swift in Sources */,
-				F19E69592A6813340018E2CE /* RootView.swift in Sources */,
+				F19E69592A6813340018E2CE /* RootScreen.swift in Sources */,
 				F1A61ED92A701572006E7382 /* Entry+CoreDataProperties.swift in Sources */,
 				F1A61EC52A70093C006E7382 /* CoreDataManager.swift in Sources */,
 				F10CDF802A701BBA00DD2F88 /* RootScreenModel.swift in Sources */,
+				F10CDF842A70216F00DD2F88 /* RoundedViewCorners.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

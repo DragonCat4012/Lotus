@@ -14,14 +14,28 @@ class RootScreenModel: ObservableObject {
     @Published var isAddEntryScreenPresented = false
     
     
+    // MARK: YearSelector
+    func forwardYear() {
+        selectedYear += 1
+    }
+    
+    func backwardYear() {
+        selectedYear -= 1
+    }
+    
     // MARK: CalendarView
-    @Published var selectedYear: Year = CoreData.getLatestYear()
+    @Published var selectedYear: Int64 = CoreData.getLatestYear().year
     
     func getColorForDay(_ day: Int, _ month: Int) -> Color {
-        let items = CoreData.getItemsOfAYear(year: selectedYear)
+        let year = CoreData.getYears().filter { $0.year == selectedYear}.first
+        var items: [Entry] = []
+        
+        if year != nil {
+            items = CoreData.getItemsOfAYear(year: year!)
+        }
         
         var components = DateComponents()
-        components.year = Int(selectedYear.year)
+        components.year = Int(selectedYear)
         components.month = month
         components.day = day
         let targetDate = Calendar.current.date(from: components)!.cleanDate()

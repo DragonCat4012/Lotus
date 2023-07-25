@@ -32,7 +32,7 @@ struct CalendarView: View {
     
     func month(_ month: Int) -> some View {
         HStack(spacing: 2) {
-            ForEach(1..<vm.getDaysInMonth(month: month, year: Int(vm.selectedYear.year))) { i in
+            ForEach(1..<vm.getDaysInMonth(month: month, year: Int(vm.selectedYear))) { i in
                 RoundedRectangle(cornerRadius: 2)
                     .fill(vm.getColorForDay(i, month))
                     .frame(width: 5, height: 5)

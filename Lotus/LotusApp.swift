@@ -13,7 +13,7 @@ struct LotusApp: App {
     
     var body: some Scene {
         WindowGroup {
-            RootView()
+            RootScreen()
                 .environmentObject(vm)
         }
     }

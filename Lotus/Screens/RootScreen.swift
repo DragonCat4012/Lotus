@@ -1,5 +1,5 @@
 //
-//  RootView.swift
+//  RootScreen.swift
 //  Lotus
 //
 //  Created by Kiara on 19.07.23.
@@ -8,7 +8,7 @@
 import SwiftUI
 import CoreData
 
-struct RootView: View {
+struct RootScreen: View {
     @EnvironmentObject var vm: RootScreenModel
     
     var body: some View {
@@ -53,7 +53,8 @@ struct RootView: View {
             
             Spacer()
             
-            Text("<< 2022 > >")
+            YearSelector()
+            
         }.padding()
     }
     
@@ -97,9 +98,9 @@ struct RootView: View {
     
 }
 
-struct RootView_Previews: PreviewProvider {
+struct RootScreen_Previews: PreviewProvider {
     static var previews: some View {
-        RootView()
+        RootScreen()
             .environmentObject(RootScreenModel())
     }
 }
