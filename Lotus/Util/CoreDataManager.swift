@@ -16,8 +16,11 @@ struct CoreData {
             arr = try context.fetch(Type.fetchRequest())
             
             if arr.isEmpty {
-                // TODO: generate default types & append to arr
+                let newType = Type(context: context)
+                newType.rawValue = 0
+                newType.color = "fffddd"
                 try! context.save()
+                arr.append(newType)
                 return arr
             }
             return arr

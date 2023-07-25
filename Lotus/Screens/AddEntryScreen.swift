@@ -17,6 +17,7 @@ struct AddEntryScreen : View {
         
         VStack {
             Text("Neuer Eintrag")
+                .font(.title)
             
             DatePicker("Pick a date uwu", selection: $selectedDate, displayedComponents: [.date])
                 .datePickerStyle(GraphicalDatePickerStyle())
@@ -24,14 +25,23 @@ struct AddEntryScreen : View {
             // TODO: pick a type
             
             Text("type")
+            
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
-                    ForEach(0..<11) { i in
+                    ForEach(CoreData.getTypes()) { type in
+                        let color = Color(hexString: type.color)
                         RoundedRectangle(cornerRadius: 8)
+                            .fill(color.opacity(0.3))
                             .frame(width: 50, height: 50)
+                            .overlay(
+                                    RoundedRectangle(cornerRadius: 8)
+                                        .stroke(type == vm.selectedType ? color : .clear, lineWidth: 2)
+                                )
+                            .shadow(radius: 2)
                     }
                 }
-            }
+            }.padding(.bottom)
+            
             
             Button("Hinzufügen") {
                 CoreData.addItem(date: selectedDate, type: 0)

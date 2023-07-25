@@ -14,6 +14,10 @@ class RootScreenModel: ObservableObject {
     @Published var isAddEntryScreenPresented = false
     
     
+    // MARK: ADddEntryScreen
+    @Published var selectedType: Type = CoreData.getTypes().first!
+    
+    
     // MARK: YearSelector
     func forwardYear() {
         selectedYear += 1
