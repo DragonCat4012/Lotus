@@ -66,6 +66,7 @@ struct CoreData {
     }
     
     static func addItem(year: Year = getLatestYear(), date: Date, type: Int64) {
+        // TODO: chekc if entry has already type
         let newItem = Entry(context: context)
         newItem.timestamp = date.cleanDate()
         newItem.value = type
