@@ -31,6 +31,8 @@ struct SettingsScreen: View {
                         Image(systemName: "heart.rectangle.fill")
                             .foregroundColor(Color(hexString: type.color))
                         Text(type.name)
+                        Spacer()
+                        Text(String(vm.getTilesCountForType(type: type)))
                     }.onTapGesture {
                         vm.selectTypeToEdit(type)
                     }

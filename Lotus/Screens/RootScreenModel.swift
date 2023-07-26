@@ -57,6 +57,10 @@ class RootScreenModel: ObservableObject {
         allTypes = CoreData.getTypes()
     }
     
+    func getTilesCountForType(type: Type) -> Int {
+      return CoreData.getEntrys().filter { $0.value == type.rawValue}.count
+    }
+    
     // MARK: YearSelector
     func forwardYear() {
         selectedYear += 1
