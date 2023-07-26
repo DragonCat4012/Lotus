@@ -34,17 +34,23 @@ struct AddEntryScreen : View {
                             .fill(color.opacity(0.3))
                             .frame(width: 50, height: 50)
                             .overlay(
-                                    RoundedRectangle(cornerRadius: 8)
-                                        .stroke(type == vm.selectedType ? color : .clear, lineWidth: 2)
+                                    ZStack {
+                                        Text(String(type.rawValue))
+                                        RoundedRectangle(cornerRadius: 8)
+                                            .stroke(type == vm.selectedType ? color : .clear, lineWidth: 2)
+                                    }
                                 )
                             .shadow(radius: 2)
+                            .onTapGesture {
+                                vm.selectedType = type
+                            }
                     }
                 }
             }.padding(.bottom)
             
             
             Button("Hinzufügen") {
-                CoreData.addItem(date: selectedDate, type: 0)
+                CoreData.addItem(date: selectedDate, type: vm.selectedType.rawValue)
                 // TODO: chekc that its a valid type
                 vm.isAddEntryScreenPresented = false
             }.buttonStyle(PrimaryStyle())
