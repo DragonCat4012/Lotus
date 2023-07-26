@@ -21,7 +21,7 @@ struct CalendarView: View {
                         .stroke(Color.black.opacity(0.6), lineWidth: 1)
                 )
                 .overlay {
-                    VStack(alignment: .leading) {
+                    VStack {
                         ForEach(0..<11) { i in
                             month(i)
                         }
@@ -31,7 +31,7 @@ struct CalendarView: View {
     }
     
     func month(_ month: Int) -> some View {
-        HStack(spacing: 2) {
+        HStack(spacing: 5) {
             ForEach(1..<vm.getDaysInMonth(month: month, year: Int(vm.selectedYear))) { i in
                 RoundedRectangle(cornerRadius: 2)
                     .fill(vm.getColorForDay(i, month))

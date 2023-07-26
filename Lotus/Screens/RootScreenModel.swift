@@ -83,33 +83,36 @@ class RootScreenModel: ObservableObject {
         components.day = day
         let targetDate = Calendar.current.date(from: components)!.cleanDate()
         
-        let item = items.filter{ $0.timestamp.cleanDate() == targetDate}
-        if item.first != nil {
-            return Color.secondary
-        } else {
+        guard let item =  items.filter({ $0.timestamp.cleanDate() == targetDate}).first else {
             return Color.white.opacity(0.2)
         }
+        
+        guard let type = CoreData.getTypes().filter({ $0.rawValue == item.value}).first else {
+            return Color.white.opacity(0.2)
+        }
+        
+        return Color(hexString: type.color)
     }
     
     func getDaysInMonth(month: Int, year: Int) -> Int {
-            let calendar = Calendar.current
-
-            var startComps = DateComponents()
-            startComps.day = 1
-            startComps.month = month
-            startComps.year = year
-
-            var endComps = DateComponents()
-            endComps.day = 1
-            endComps.month = month == 12 ? 1 : month + 1
-            endComps.year = month == 12 ? year + 1 : year
-
-            let startDate = calendar.date(from: startComps)!
-            let endDate = calendar.date(from:endComps)!
-
-            
-            let diff = calendar.dateComponents([Calendar.Component.day], from: startDate, to: endDate)
-
-            return (diff.day ?? 0) + 1
-        }
+        let calendar = Calendar.current
+        
+        var startComps = DateComponents()
+        startComps.day = 1
+        startComps.month = month
+        startComps.year = year
+        
+        var endComps = DateComponents()
+        endComps.day = 1
+        endComps.month = month == 12 ? 1 : month + 1
+        endComps.year = month == 12 ? year + 1 : year
+        
+        let startDate = calendar.date(from: startComps)!
+        let endDate = calendar.date(from:endComps)!
+        
+        
+        let diff = calendar.dateComponents([Calendar.Component.day], from: startDate, to: endDate)
+        
+        return (diff.day ?? 0) + 1
+    }
 }
