@@ -46,6 +46,7 @@ class RootScreenModel: ObservableObject {
     
     // MARK: Settings
     @Published var allTypes = CoreData.getTypes()
+    @Published var allEntries = CoreData.getEntrys()
     
     func addType(){
         CoreData.addType()
@@ -57,8 +58,9 @@ class RootScreenModel: ObservableObject {
         allTypes = CoreData.getTypes()
     }
     
-    func getTilesCountForType(type: Type) -> Int {
-      return CoreData.getEntrys().filter { $0.value == type.rawValue}.count
+    func deleteEntry(_ entry: Entry) {
+        CoreData.removeItem(item: entry)
+        allEntries = CoreData.getEntrys()
     }
     
     // MARK: YearSelector
@@ -88,6 +90,10 @@ class RootScreenModel: ObservableObject {
             arr.append(getDaysInMonth(month: month))
         }
         daysForMonth = arr
+    }
+    
+    func getTilesCountForType(type: Type) -> Int {
+      return CoreData.getEntrys().filter { $0.value == type.rawValue}.count
     }
     
     func getColorForDay(_ day: Int, _ month: Int) -> Color {
