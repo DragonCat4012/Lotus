@@ -27,7 +27,7 @@ struct SettingsScreen: View {
             Section {
                 ForEach(vm.allTypes) { type in
                     HStack {
-                        // TODO:   Text(String(type.rawValue)).foregroundColor(.gray)
+                        Text(String(type.rawValue)).foregroundColor(.gray)
                         Image(systemName: "heart.rectangle.fill")
                             .foregroundColor(Color(hexString: type.color))
                         Text(type.name)
