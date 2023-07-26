@@ -42,6 +42,9 @@ struct RootScreen: View {
                 .sheet(isPresented: $vm.isAddEntryScreenPresented){
                     AddEntryScreen()
                 }
+                .sheet(isPresented: $vm.isSettingsScreenPresented){
+                    SettingsScreen()
+                }
         }.navigationTitle("hmmm")
     }
     
@@ -79,7 +82,7 @@ struct RootScreen: View {
             }.buttonStyle(PrimaryStyle())
             
             Button("Settings") {
-                
+                vm.isSettingsScreenPresented = true
             }.buttonStyle(SecondaryStyle())
         }.padding()
     }

@@ -32,6 +32,7 @@
 		F1A61ED42A7012CD006E7382 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61ED32A7012CD006E7382 /* Date.swift */; };
 		F1A61ED82A701572006E7382 /* Entry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61ED62A701572006E7382 /* Entry+CoreDataClass.swift */; };
 		F1A61ED92A701572006E7382 /* Entry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61ED72A701572006E7382 /* Entry+CoreDataProperties.swift */; };
+		F1C2AD532A718A7500DE679D /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C2AD522A718A7500DE679D /* SettingsScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		F1A61ED52A70151A006E7382 /* Lotus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lotus.entitlements; sourceTree = "<group>"; };
 		F1A61ED62A701572006E7382 /* Entry+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		F1A61ED72A701572006E7382 /* Entry+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		F1C2AD522A718A7500DE679D /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				F19BBF232A6833EC0030F090 /* StatsScreen.swift */,
 				F10CDF7D2A7019C400DD2F88 /* AddEntryScreen.swift */,
 				F10CDF7F2A701BBA00DD2F88 /* RootScreenModel.swift */,
+				F1C2AD522A718A7500DE679D /* SettingsScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F10CDF822A701E9000DD2F88 /* YearSelector.swift in Sources */,
+				F1C2AD532A718A7500DE679D /* SettingsScreen.swift in Sources */,
 				F1A61ED02A70096D006E7382 /* Type+CoreDataProperties.swift in Sources */,
 				F1A61ECD2A70096D006E7382 /* Year+CoreDataClass.swift in Sources */,
 				F19E695B2A6813840018E2CE /* ButtonStyles.swift in Sources */,

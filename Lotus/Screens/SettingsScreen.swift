@@ -1,0 +1,65 @@
+//
+//  SettingsScreen.swift
+//  Lotus
+//
+//  Created by Kiara on 26.07.23.
+//
+
+import SwiftUI
+
+struct SettingsScreen: View {
+    @EnvironmentObject var vm: RootScreenModel
+    
+    var body: some View {
+        List {
+            
+            if vm.editTypePresented {
+                Section("Edit Type") {
+                    TextField("Typename", text: $vm.editTypeNme)
+                    ColorPicker("Shape 1 color", selection: $vm.editSelectedColor, supportsOpacity: false)
+                    
+                    Button("save changes") {
+                        vm.saveTypeChanges()
+                    }.listRowBackground(Color.green)
+                }
+            }
+            
+            Section {
+                ForEach(CoreData.getTypes()) { type in
+                    HStack {
+                        //    Text(String(type.rawValue)).foregroundColor(.gray)
+                        Image(systemName: "heart.rectangle.fill")
+                            .foregroundColor(Color(hexString: type.color))
+                        Text(type.name)
+                    }  .swipeActions {
+                        
+                        Button {
+                            vm.selectTypeToEdit(type)
+                        } label: {
+                            Image(systemName: "pencil")
+                        }
+                        
+                        if CoreData.getTypes().count > 1 {
+                            Button() {
+                                CoreData.removeType(type: type)
+                            } label: {
+                                Image(systemName: "trash.fill")
+                            } .tint(.red)
+                        }
+                        
+                    }
+                    
+                    Button("Add new type") {
+                        print("huh")
+                    }.listRowBackground(Color.green)
+                    
+                }
+            } header: {
+                Text("All Types")
+            } footer: {
+                Text("Swipe to edit types")
+            }
+        }
+    }
+    
+}

@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import SwiftUI
+import UIKit
 
 struct CoreData {
     static let context = CoreDataStack.sharedContext
@@ -49,6 +51,16 @@ struct CoreData {
         return arr
     }
     
+    static func getEntrys() -> [Entry] {
+        var arr: [Entry] = []
+        do {
+            arr = try context.fetch(Entry.fetchRequest())
+        } catch {
+            log("Error getting entrys")
+        }
+        return arr
+    }
+    
     static func getItemsOfAYear(year: Year) -> [Entry] {
         return (year.items.allObjects as? [Entry])!
     }
@@ -70,16 +82,18 @@ struct CoreData {
         }
     }
     
-    static func editType(type: Type, color: String) {
+    static func editType(type: Type, color: Color, name: String) {
         do {
-            type.color = color
+            type.color = UIColor(color).toHexString()
+            type.name = name
+            
             try context.save()
         } catch {
             log("Error editing Type")
         }
     }
     
-    static func addType(color: String) {
+    static func addType(color: String, name: String = "name") {
         var num: Int64 = 0
         let assignedInts = getTypes().map { $0.rawValue}
         let newItem = Type(context: context)
@@ -90,6 +104,7 @@ struct CoreData {
         } while (assignedInts.contains(num))
         
         newItem.rawValue = num
+        newItem.name = name
         
         do {
             try context.save()
@@ -101,7 +116,18 @@ struct CoreData {
     }
     
     static func removeType(type: Type) {
-        //TODO: remove all items with this type
+        let count = getTypes().count
+        
+        if count == 1 {
+            log("Cant delete last type")
+            return
+        }
+        
+        getEntrys().forEach { entry in
+            if entry.value == type.rawValue {
+                context.delete(entry)
+            }
+        }
     }
     
     static func getLatestYear() -> Year {

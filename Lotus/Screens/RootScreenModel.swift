@@ -12,11 +12,37 @@ class RootScreenModel: ObservableObject {
     // MARK: RootView
     @Published var isStatsScreenPresented = false
     @Published var isAddEntryScreenPresented = false
-    
+    @Published var isSettingsScreenPresented = false
     
     // MARK: ADddEntryScreen
     @Published var selectedType: Type = CoreData.getTypes().first!
     
+    // MARK: EditType
+    @Published var editTypePresented = false
+    @Published var selectedTypeToEdit: Type?
+    @Published var editSelectedColor: Color = .primary
+    @Published var editTypeNme = ""
+    
+    func selectTypeToEdit(_ type: Type) {
+        selectedTypeToEdit = type
+        editSelectedColor = Color(hexString: type.color)
+        editTypeNme = type.name
+        withAnimation {
+            editTypePresented = true
+        }
+    }
+    
+    func saveTypeChanges() {
+        guard let type = selectedTypeToEdit else { return }
+        
+        CoreData.editType(type: type, color: editSelectedColor, name: editTypeNme)
+        
+        selectedTypeToEdit = nil
+        
+        withAnimation {
+            editTypePresented = false
+        }
+    }
     
     // MARK: YearSelector
     func forwardYear() {

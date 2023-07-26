@@ -2,7 +2,7 @@
 //  Type+CoreDataProperties.swift
 //  Lotus
 //
-//  Created by Kiara on 25.07.23.
+//  Created by Kiara on 26.07.23.
 //
 //
 
@@ -18,6 +18,7 @@ extension Type {
 
     @NSManaged public var color: String
     @NSManaged public var rawValue: Int64
+    @NSManaged public var name: String
 
 }
 
