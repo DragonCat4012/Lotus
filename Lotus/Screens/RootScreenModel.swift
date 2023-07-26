@@ -60,10 +60,14 @@ class RootScreenModel: ObservableObject {
     // MARK: YearSelector
     func forwardYear() {
         selectedYear += 1
+        getTileData()
+        self.objectWillChange.send()
     }
     
     func backwardYear() {
         selectedYear -= 1
+        getTileData()
+        self.objectWillChange.send()
     }
     
     func isLatestsYear() -> Bool {
@@ -72,6 +76,15 @@ class RootScreenModel: ObservableObject {
     
     // MARK: CalendarView
     @Published var selectedYear: Int64 = CoreData.getLatestYear().year
+    @Published var daysForMonth: [Int] = []
+    
+    func getTileData() {
+        var arr: [Int] = []
+        for month in 1..<13 {
+            arr.append(getDaysInMonth(month: month))
+        }
+        daysForMonth = arr
+    }
     
     func getColorForDay(_ day: Int, _ month: Int) -> Color {
         let year = CoreData.getYears().filter { $0.year == selectedYear}.first
@@ -98,7 +111,8 @@ class RootScreenModel: ObservableObject {
         return Color(hexString: type.color)
     }
     
-    func getDaysInMonth(month: Int, year: Int) -> Int {
+    func getDaysInMonth(month: Int) -> Int {
+        let year = Int(selectedYear)
         let calendar = Calendar.current
         
         var startComps = DateComponents()
@@ -116,7 +130,7 @@ class RootScreenModel: ObservableObject {
         
         
         let diff = calendar.dateComponents([Calendar.Component.day], from: startDate, to: endDate)
-        
+   
         return (diff.day ?? 0) + 1
     }
 }
