@@ -93,7 +93,7 @@ struct CoreData {
         }
     }
     
-    static func addType(color: String, name: String = "name") {
+    static func addType(color: String = UIColor(Color.primary).toHexString(), name: String = "name") {
         var num: Int64 = 0
         let assignedInts = getTypes().map { $0.rawValue}
         let newItem = Type(context: context)
@@ -127,6 +127,13 @@ struct CoreData {
             if entry.value == type.rawValue {
                 context.delete(entry)
             }
+        }
+        
+        context.delete(type)
+        do {
+            try context.save()
+        } catch {
+            log("Error removing Type")
         }
     }
     

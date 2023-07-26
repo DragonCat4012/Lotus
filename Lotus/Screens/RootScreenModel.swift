@@ -44,6 +44,19 @@ class RootScreenModel: ObservableObject {
         }
     }
     
+    // MARK: Settings
+    @Published var allTypes = CoreData.getTypes()
+    
+    func addType(){
+        CoreData.addType()
+        allTypes = CoreData.getTypes()
+    }
+    
+    func removeType(type: Type){
+        CoreData.removeType(type: type)
+        allTypes = CoreData.getTypes()
+    }
+    
     // MARK: YearSelector
     func forwardYear() {
         selectedYear += 1

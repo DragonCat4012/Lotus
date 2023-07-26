@@ -25,14 +25,16 @@ struct SettingsScreen: View {
             }
             
             Section {
-                ForEach(CoreData.getTypes()) { type in
+                ForEach(vm.allTypes) { type in
                     HStack {
-                        //    Text(String(type.rawValue)).foregroundColor(.gray)
+                        // TODO:   Text(String(type.rawValue)).foregroundColor(.gray)
                         Image(systemName: "heart.rectangle.fill")
                             .foregroundColor(Color(hexString: type.color))
                         Text(type.name)
-                    }  .swipeActions {
-                        
+                    }.onTapGesture {
+                        vm.selectTypeToEdit(type)
+                    }
+                    .swipeActions {
                         Button {
                             vm.selectTypeToEdit(type)
                         } label: {
@@ -41,19 +43,18 @@ struct SettingsScreen: View {
                         
                         if CoreData.getTypes().count > 1 {
                             Button() {
-                                CoreData.removeType(type: type)
+                                vm.removeType(type: type)
                             } label: {
                                 Image(systemName: "trash.fill")
                             } .tint(.red)
                         }
-                        
                     }
-                    
-                    Button("Add new type") {
-                        print("huh")
-                    }.listRowBackground(Color.green)
-                    
                 }
+                
+                Button("Add new type") {
+                    vm.addType()
+                }.listRowBackground(Color.green)
+                
             } header: {
                 Text("All Types")
             } footer: {
