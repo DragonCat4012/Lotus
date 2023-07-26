@@ -8,24 +8,28 @@
 import SwiftUI
 
 struct PrimaryStyle: ButtonStyle {
+    @Environment(\.isEnabled) var isEnabled
+    
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .frame(height: 15)
             .frame(maxWidth: .infinity)
             .padding()
-            .background(Color.primary)
+            .background(isEnabled ? Color.primary : Color.gray)
             .cornerRadius(8)
             .foregroundColor(.white)
     }
 }
 
 struct SecondaryStyle: ButtonStyle {
+    @Environment(\.isEnabled) var isEnabled
+    
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .frame(height: 15)
             .frame(maxWidth: .infinity)
             .padding()
-            .background(Color.secondary)
+            .background(isEnabled ? Color.secondary : Color.gray)
             .cornerRadius(8)
             .foregroundColor(.white)
     }

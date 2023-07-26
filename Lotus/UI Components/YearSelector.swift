@@ -32,6 +32,7 @@ struct YearSelector: View {
             } label: {
                 Image(systemName: "chevron.right.2")
             }.cornerRadius(15, corners: [.topRight, .bottomRight])
+                .disabled(vm.isLatestsYear())
                 .frame(width: 40)
             
         }.buttonStyle(PrimaryStyle())

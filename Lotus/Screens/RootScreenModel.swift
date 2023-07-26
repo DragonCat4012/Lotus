@@ -66,6 +66,10 @@ class RootScreenModel: ObservableObject {
         selectedYear -= 1
     }
     
+    func isLatestsYear() -> Bool {
+        return CoreData.getLatestYear().year == selectedYear
+    }
+    
     // MARK: CalendarView
     @Published var selectedYear: Int64 = CoreData.getLatestYear().year
     
