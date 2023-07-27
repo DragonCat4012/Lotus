@@ -13,6 +13,7 @@ class RootScreenModel: ObservableObject {
     @Published var isStatsScreenPresented = false
     @Published var isAddEntryScreenPresented = false
     @Published var isSettingsScreenPresented = false
+    @Published var isEditEntriesScreenPresented = false
     
     // MARK: ADddEntryScreen
     @Published var selectedType: Type = CoreData.getTypes().first!

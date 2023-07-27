@@ -32,6 +32,7 @@
 		F1A61ED42A7012CD006E7382 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61ED32A7012CD006E7382 /* Date.swift */; };
 		F1A61ED82A701572006E7382 /* Entry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61ED62A701572006E7382 /* Entry+CoreDataClass.swift */; };
 		F1A61ED92A701572006E7382 /* Entry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61ED72A701572006E7382 /* Entry+CoreDataProperties.swift */; };
+		F1BB331B2A72B2940035DDA4 /* EditEntrysScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BB331A2A72B2940035DDA4 /* EditEntrysScreen.swift */; };
 		F1C2AD532A718A7500DE679D /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C2AD522A718A7500DE679D /* SettingsScreen.swift */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,7 @@
 		F1A61ED52A70151A006E7382 /* Lotus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lotus.entitlements; sourceTree = "<group>"; };
 		F1A61ED62A701572006E7382 /* Entry+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		F1A61ED72A701572006E7382 /* Entry+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		F1BB331A2A72B2940035DDA4 /* EditEntrysScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEntrysScreen.swift; sourceTree = "<group>"; };
 		F1C2AD522A718A7500DE679D /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,6 +130,7 @@
 				F10CDF7D2A7019C400DD2F88 /* AddEntryScreen.swift */,
 				F10CDF7F2A701BBA00DD2F88 /* RootScreenModel.swift */,
 				F1C2AD522A718A7500DE679D /* SettingsScreen.swift */,
+				F1BB331A2A72B2940035DDA4 /* EditEntrysScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 				F1A61ED82A701572006E7382 /* Entry+CoreDataClass.swift in Sources */,
 				F19BBF202A682F930030F090 /* CalendarView.swift in Sources */,
 				F1A61ECE2A70096D006E7382 /* Year+CoreDataProperties.swift in Sources */,
+				F1BB331B2A72B2940035DDA4 /* EditEntrysScreen.swift in Sources */,
 				F1A61ED42A7012CD006E7382 /* Date.swift in Sources */,
 				F19E69352A68109C0018E2CE /* Lotus.xcdatamodeld in Sources */,
 				F1A61EC32A7008F2006E7382 /* CoreDataStack.swift in Sources */,

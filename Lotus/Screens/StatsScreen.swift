@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct StatsScreen: View {
+    
+    @EnvironmentObject var vm: RootScreenModel
+    
     var body: some View {
         
         ZStack {
@@ -20,7 +23,7 @@ struct StatsScreen: View {
                 .opacity(0.6)
             
             VStack {
-                Text("Some Stats")
+                Text("Some Stats \(vm.selectedYear)")
                     .font(.title)
                 Text("h")
             }.foregroundColor(.white)

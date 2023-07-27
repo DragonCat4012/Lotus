@@ -64,33 +64,12 @@ struct SettingsScreen: View {
             }
             
             Section {
-                ForEach(vm.allEntries) { entry in
-                    HStack {
-                        Text(formatDate(entry.timestamp)) // TODO: show colors
-                        Spacer()
-                        Text(String(entry.value))
-                    }.swipeActions {
-                        Button() {
-                            vm.deleteEntry(entry)
-                        } label: {
-                            Image(systemName: "trash.fill")
-                        } .tint(.red)
-                    }
+                Button("Edit entrys") {
+                    vm.isEditEntriesScreenPresented = true
                 }
             }
-        header: {
-            Text("All Entries")
-        } footer: {
-            Text("Swipe to delete entry")
-        }
-            
+        }.sheet(isPresented: $vm.isEditEntriesScreenPresented) {
+            EditEntrysScreen()
         }
     }
-    
-    func formatDate(_ date: Date) -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd.MM.yyyy"
-        return formatter.string(from: date)
-    }
-    
 }
