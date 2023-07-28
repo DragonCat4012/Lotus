@@ -36,7 +36,7 @@ struct RankingView: View {
     }
 }
 
-struct SortResult {
+struct SortResult: Hashable {
     let type: Type
     let count: Int
 }
