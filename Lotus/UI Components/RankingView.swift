@@ -14,9 +14,9 @@ struct RankingView: View {
     var body: some View {
         VStack {
             HStack {
-                RoundedRectangle(cornerRadius: 8).fill(Color.orange).frame(width: 50, height: 50)
-                RoundedRectangle(cornerRadius: 8).fill(Color.orange).frame(width: 50, height: 50)
-                RoundedRectangle(cornerRadius: 8).fill(Color.orange).frame(width: 50, height: 50)
+                entryView(0)
+                entryView(1)
+                entryView(2)
             }
             
             HStack {
@@ -26,4 +26,17 @@ struct RankingView: View {
             }
         }
     }
+    
+    func entryView(_ nr: Int) -> some View {
+        let entry = vm.getRank(nr)
+        return ZStack {
+            RoundedRectangle(cornerRadius: 8).fill(entry.0)
+            Text(String(entry.1))
+        }.frame(width: 50, height: 50)
+    }
+}
+
+struct SortResult {
+    let type: Type
+    let count: Int
 }

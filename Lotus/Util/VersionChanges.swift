@@ -10,6 +10,10 @@ import Foundation
 let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "0.0.0"
 let UD_appVersion = "latestAppVersion"
 
+func isFirstLaunch() -> Bool {
+    return UserDefaults.standard.string(forKey: UD_appVersion) == ""
+}
+
 func isLatestVersion() -> Bool {
     return UserDefaults.standard.string(forKey: UD_appVersion) == appVersion
 }

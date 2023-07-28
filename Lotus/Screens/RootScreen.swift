@@ -32,22 +32,21 @@ struct RootScreen: View {
                     
                     Spacer()
                     
+                    BarView()
+                    
                     RankingView()
                     
                     buttons().padding(.bottom, 20)
                     
                 }.ignoresSafeArea()
             }.ignoresSafeArea()
-                .sheet(isPresented: $vm.isStatsScreenPresented){
-                    StatsScreen()
-                }
                 .sheet(isPresented: $vm.isAddEntryScreenPresented){
                     AddEntryScreen()
                 }
                 .sheet(isPresented: $vm.isSettingsScreenPresented){
                     SettingsScreen()
                 }
-        }.navigationTitle("hmmm")
+        }.navigationTitle("hmmm").onAppear(perform: vm.onAppear)
     }
     
     func actionRow() -> some View {
