@@ -25,7 +25,7 @@ struct BarView: View {
                 
                 HStack(spacing: 0) {
                     if maxCount > 0 {
-                        ForEach(vm.highestRanks, id:\.self) { res in
+                        ForEach(vm.highestRanks, id: \.self) { res in
                             let percent: Double = Double(res.count) / maxCount
                             let color = Color(hexString: res.type.color)
                             RoundedRectangle(cornerRadius: 8).fill(color).frame(width: width * percent).frame(height: 20)

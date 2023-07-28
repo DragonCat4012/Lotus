@@ -19,7 +19,7 @@ struct EditEntrysScreen: View {
                         Spacer()
                         Text(String(entry.value))
                     }.swipeActions {
-                        Button() {
+                        Button {
                             vm.deleteEntry(entry)
                         } label: {
                             Image(systemName: "trash.fill")

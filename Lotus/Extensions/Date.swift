@@ -9,8 +9,7 @@ import Foundation
 
 extension Date {
 
-    func cleanDate() -> Date
-    {
+    func cleanDate() -> Date {
         let calendar = Calendar.current
         let currentDate = calendar.dateComponents([.year, .month, .day, .hour, .minute, .second], from: self)
         var components = DateComponents()

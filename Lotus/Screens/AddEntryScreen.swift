@@ -7,9 +7,7 @@
 
 import SwiftUI
 
-
-
-struct AddEntryScreen : View {
+struct AddEntryScreen: View {
     @State var selectedDate = Date()
     @EnvironmentObject var vm: RootScreenModel
     
@@ -21,7 +19,6 @@ struct AddEntryScreen : View {
             
             DatePicker("Pick a date uwu", selection: $selectedDate, displayedComponents: [.date])
                 .datePickerStyle(GraphicalDatePickerStyle())
-            
             
             Text("type")
                 .frame(maxWidth: .infinity)
@@ -47,10 +44,8 @@ struct AddEntryScreen : View {
                 }
             }.padding(.bottom)
             
-            
             Button("Hinzufügen") {
                 CoreData.addItem(date: selectedDate, type: vm.selectedType.rawValue)
-                // TODO: chekc that its a valid type
                 vm.isAddEntryScreenPresented = false
             }.buttonStyle(PrimaryStyle())
         }.padding()

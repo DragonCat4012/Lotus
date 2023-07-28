@@ -66,7 +66,6 @@ struct CoreData {
     }
     
     static func addItem(year: Year = getLatestYear(), date: Date, type: Int64) {
-        // TODO: chekc if entry has already type
         let newItem = Entry(context: context)
         newItem.timestamp = date.cleanDate()
         newItem.value = type
@@ -113,7 +112,7 @@ struct CoreData {
             log("Error adding Type")
         }
         
-        //TODO: check for unassigned int
+        // TODO: check for unassigned int
     }
     
     static func removeType(type: Type) {

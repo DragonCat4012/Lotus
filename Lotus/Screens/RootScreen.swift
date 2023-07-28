@@ -40,10 +40,10 @@ struct RootScreen: View {
                     
                 }.ignoresSafeArea()
             }.ignoresSafeArea()
-                .sheet(isPresented: $vm.isAddEntryScreenPresented){
+                .sheet(isPresented: $vm.isAddEntryScreenPresented) {
                     AddEntryScreen()
                 }
-                .sheet(isPresented: $vm.isSettingsScreenPresented){
+                .sheet(isPresented: $vm.isSettingsScreenPresented) {
                     SettingsScreen()
                 }
         }.navigationTitle("hmmm").onAppear(perform: vm.onAppear)
@@ -92,8 +92,6 @@ struct RootScreen: View {
             }.frame(width: geo.size.width, height: 300)
         }
     }
-    
-    
 }
 
 struct RootScreen_Previews: PreviewProvider {

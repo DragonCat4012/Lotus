@@ -12,7 +12,6 @@ extension Color {
     static let secondary = Color("SecondaryGreen")
 }
 
-
 // MARK: manage hex colors
 extension Color {
     init(hexString: String) {

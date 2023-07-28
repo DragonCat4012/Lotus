@@ -7,12 +7,11 @@
 
 import SwiftUI
 
-
 struct YearSelector: View {
     @EnvironmentObject var vm: RootScreenModel
     
     var body: some View {
-        HStack (spacing: 8) {
+        HStack(spacing: 8) {
             Button {
                 vm.backwardYear()
             } label: {

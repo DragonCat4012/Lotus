@@ -7,26 +7,25 @@
 
 import SwiftUI
 
-
 class RootScreenModel: ObservableObject {
     // MARK: RootView
     @Published var isAddEntryScreenPresented = false
     @Published var isSettingsScreenPresented = false
     @Published var isEditEntriesScreenPresented = false
-    
+
     func onAppear() {
         getHighestRanks()
     }
-    
+
     // MARK: ADddEntryScreen
     @Published var selectedType: Type = CoreData.getTypes().first!
-    
+
     // MARK: EditType
     @Published var editTypePresented = false
     @Published var selectedTypeToEdit: Type?
     @Published var editSelectedColor: Color = .primary
     @Published var editTypeNme = ""
-    
+
     func selectTypeToEdit(_ type: Type) {
         selectedTypeToEdit = type
         editSelectedColor = Color(hexString: type.color)
@@ -35,38 +34,38 @@ class RootScreenModel: ObservableObject {
             editTypePresented = true
         }
     }
-    
+
     func saveTypeChanges() {
         guard let type = selectedTypeToEdit else { return }
-        
+    
         CoreData.editType(type: type, color: editSelectedColor, name: editTypeNme)
-        
+    
         selectedTypeToEdit = nil
-        
+    
         withAnimation {
             editTypePresented = false
         }
     }
-    
+
     // MARK: Settings
     @Published var allTypes = CoreData.getTypes()
     @Published var allEntries = CoreData.getEntrys()
-    
-    func addType(){
+
+    func addType() {
         CoreData.addType()
         allTypes = CoreData.getTypes()
     }
-    
-    func removeType(type: Type){
+
+    func removeType(type: Type) {
         CoreData.removeType(type: type)
         allTypes = CoreData.getTypes()
     }
-    
+
     func deleteEntry(_ entry: Entry) {
         CoreData.removeItem(item: entry)
         allEntries = CoreData.getEntrys()
     }
-    
+
     // MARK: YearSelector
     func forwardYear() {
         selectedYear += 1
@@ -74,22 +73,22 @@ class RootScreenModel: ObservableObject {
         getHighestRanks()
         self.objectWillChange.send()
     }
-    
+
     func backwardYear() {
         selectedYear -= 1
         getTileData()
         getHighestRanks()
         self.objectWillChange.send()
     }
-    
+
     func isLatestsYear() -> Bool {
         return CoreData.getLatestYear().year == selectedYear
     }
-    
+
     // MARK: CalendarView
     @Published var selectedYear: Int64 = CoreData.getLatestYear().year
     @Published var daysForMonth: [Int] = []
-    
+
     func getTileData() {
         var arr: [Int] = []
         for month in 1..<13 {
@@ -142,8 +141,7 @@ class RootScreenModel: ObservableObject {
         endComps.year = month == 12 ? year + 1 : year
         
         let startDate = calendar.date(from: startComps)!
-        let endDate = calendar.date(from:endComps)!
-        
+        let endDate = calendar.date(from: endComps)!
         
         let diff = calendar.dateComponents([Calendar.Component.day], from: startDate, to: endDate)
         
@@ -174,4 +172,3 @@ class RootScreenModel: ObservableObject {
         return (Color.gray, 0)
     }
 }
-

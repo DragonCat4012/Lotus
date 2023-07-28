@@ -44,7 +44,7 @@ struct SettingsScreen: View {
                         }
                         
                         if CoreData.getTypes().count > 1 {
-                            Button() {
+                            Button {
                                 vm.removeType(type: type)
                             } label: {
                                 Image(systemName: "trash.fill")
