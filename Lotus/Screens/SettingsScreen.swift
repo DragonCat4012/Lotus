@@ -20,7 +20,7 @@ struct SettingsScreen: View {
                     
                     Button("save changes") {
                         vm.saveTypeChanges()
-                    }.listRowBackground(Color.green)
+                    }.listRowBackground(Color.primary).foregroundColor(Color.white)
                 }
             }
             
@@ -55,7 +55,7 @@ struct SettingsScreen: View {
                 
                 Button("Add new type") {
                     vm.addType()
-                }.listRowBackground(Color.green)
+                }.listRowBackground(Color.primary).foregroundColor(Color.white)
                 
             } header: {
                 Text("All Types")
