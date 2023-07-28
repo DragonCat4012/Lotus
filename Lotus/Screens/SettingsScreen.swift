@@ -68,7 +68,7 @@ struct SettingsScreen: View {
                     vm.isEditEntriesScreenPresented = true
                 }
             } footer: {
-                Text(appVersion)
+                Text("Version: " + appVersion)
             }
         }.sheet(isPresented: $vm.isEditEntriesScreenPresented) {
             EditEntrysScreen()

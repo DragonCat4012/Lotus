@@ -10,10 +10,13 @@ import SwiftUI
 
 class RootScreenModel: ObservableObject {
     // MARK: RootView
-    @Published var isStatsScreenPresented = false
     @Published var isAddEntryScreenPresented = false
     @Published var isSettingsScreenPresented = false
     @Published var isEditEntriesScreenPresented = false
+    
+    func onAppear() {
+        getHighestRanks()
+    }
     
     // MARK: ADddEntryScreen
     @Published var selectedType: Type = CoreData.getTypes().first!
@@ -68,12 +71,14 @@ class RootScreenModel: ObservableObject {
     func forwardYear() {
         selectedYear += 1
         getTileData()
+        getHighestRanks()
         self.objectWillChange.send()
     }
     
     func backwardYear() {
         selectedYear -= 1
         getTileData()
+        getHighestRanks()
         self.objectWillChange.send()
     }
     
@@ -94,7 +99,7 @@ class RootScreenModel: ObservableObject {
     }
     
     func getTilesCountForType(type: Type) -> Int {
-      return CoreData.getEntrys().filter { $0.value == type.rawValue}.count
+        return CoreData.getEntrys().filter { $0.value == type.rawValue}.count
     }
     
     func getColorForDay(_ day: Int, _ month: Int) -> Color {
@@ -141,7 +146,32 @@ class RootScreenModel: ObservableObject {
         
         
         let diff = calendar.dateComponents([Calendar.Component.day], from: startDate, to: endDate)
-   
+        
         return (diff.day ?? 0) + 1
     }
+    
+    // MARK: Ranking View
+    @Published var highestRanks: [SortResult] = []
+    
+    func getHighestRanks() {
+        let types = CoreData.getTypes()
+        let entrys = CoreData.getEntrys().filter { $0.year?.year == selectedYear}
+        
+        var arr: [SortResult] = []
+        
+        types.forEach { type in
+            arr.append(SortResult(type: type, count: entrys.filter {$0.value == type.rawValue}.count))
+        }
+        
+        highestRanks = arr.sorted { $0.count > $1.count }
+    }
+    
+    func getRank(_ nr: Int) -> (Color, Int) {
+        if highestRanks.count > nr {
+            let color = Color(hexString: highestRanks[nr].type.color)
+            return (color, highestRanks[nr].count)
+        }
+        return (Color.gray, 0)
+    }
 }
+
