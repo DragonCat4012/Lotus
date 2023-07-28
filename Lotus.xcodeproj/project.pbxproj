@@ -32,6 +32,8 @@
 		F1A61ED42A7012CD006E7382 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61ED32A7012CD006E7382 /* Date.swift */; };
 		F1A61ED82A701572006E7382 /* Entry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61ED62A701572006E7382 /* Entry+CoreDataClass.swift */; };
 		F1A61ED92A701572006E7382 /* Entry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61ED72A701572006E7382 /* Entry+CoreDataProperties.swift */; };
+		F1A61F5C2A73D53D0049FC7A /* VersionChanges.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61F5B2A73D53D0049FC7A /* VersionChanges.swift */; };
+		F1A61F5E2A73D6910049FC7A /* RankingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61F5D2A73D6910049FC7A /* RankingView.swift */; };
 		F1BB331B2A72B2940035DDA4 /* EditEntrysScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BB331A2A72B2940035DDA4 /* EditEntrysScreen.swift */; };
 		F1C2AD532A718A7500DE679D /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C2AD522A718A7500DE679D /* SettingsScreen.swift */; };
 /* End PBXBuildFile section */
@@ -84,6 +86,8 @@
 		F1A61ED52A70151A006E7382 /* Lotus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lotus.entitlements; sourceTree = "<group>"; };
 		F1A61ED62A701572006E7382 /* Entry+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		F1A61ED72A701572006E7382 /* Entry+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		F1A61F5B2A73D53D0049FC7A /* VersionChanges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionChanges.swift; sourceTree = "<group>"; };
+		F1A61F5D2A73D6910049FC7A /* RankingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingView.swift; sourceTree = "<group>"; };
 		F1BB331A2A72B2940035DDA4 /* EditEntrysScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEntrysScreen.swift; sourceTree = "<group>"; };
 		F1C2AD522A718A7500DE679D /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,6 +122,7 @@
 			children = (
 				F19BBF1F2A682F930030F090 /* CalendarView.swift */,
 				F10CDF812A701E9000DD2F88 /* YearSelector.swift */,
+				F1A61F5D2A73D6910049FC7A /* RankingView.swift */,
 			);
 			path = "UI Components";
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 				F1A61EC62A700961006E7382 /* CoreData */,
 				F1A61EC22A7008F2006E7382 /* CoreDataStack.swift */,
 				F1A61EC42A70093C006E7382 /* CoreDataManager.swift */,
+				F1A61F5B2A73D53D0049FC7A /* VersionChanges.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -370,6 +376,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F10CDF822A701E9000DD2F88 /* YearSelector.swift in Sources */,
+				F1A61F5E2A73D6910049FC7A /* RankingView.swift in Sources */,
 				F1C2AD532A718A7500DE679D /* SettingsScreen.swift in Sources */,
 				F1A61ED02A70096D006E7382 /* Type+CoreDataProperties.swift in Sources */,
 				F1A61ECD2A70096D006E7382 /* Year+CoreDataClass.swift in Sources */,
@@ -389,6 +396,7 @@
 				F19E69592A6813340018E2CE /* RootScreen.swift in Sources */,
 				F1A61ED92A701572006E7382 /* Entry+CoreDataProperties.swift in Sources */,
 				F1A61EC52A70093C006E7382 /* CoreDataManager.swift in Sources */,
+				F1A61F5C2A73D53D0049FC7A /* VersionChanges.swift in Sources */,
 				F10CDF802A701BBA00DD2F88 /* RootScreenModel.swift in Sources */,
 				F10CDF842A70216F00DD2F88 /* RoundedViewCorners.swift in Sources */,
 			);
@@ -477,7 +485,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -531,7 +539,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

@@ -32,6 +32,8 @@ struct RootScreen: View {
                     
                     Spacer()
                     
+                    RankingView()
+                    
                     buttons().padding(.bottom, 20)
                     
                 }.ignoresSafeArea()
@@ -75,15 +77,9 @@ struct RootScreen: View {
     
     func buttons() -> some View {
         VStack {
-            Button {
-                vm.isStatsScreenPresented = true
-            } label: {
-                Text("Stats")
-            }.buttonStyle(PrimaryStyle())
-            
             Button("Settings") {
                 vm.isSettingsScreenPresented = true
-            }.buttonStyle(SecondaryStyle())
+            }.buttonStyle(PrimaryStyle())
         }.padding()
     }
     

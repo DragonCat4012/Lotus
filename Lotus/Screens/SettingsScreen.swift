@@ -67,6 +67,8 @@ struct SettingsScreen: View {
                 Button("Edit entrys") {
                     vm.isEditEntriesScreenPresented = true
                 }
+            } footer: {
+                Text(appVersion)
             }
         }.sheet(isPresented: $vm.isEditEntriesScreenPresented) {
             EditEntrysScreen()
