@@ -34,6 +34,8 @@
 		F1A61F5C2A73D53D0049FC7A /* VersionChanges.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61F5B2A73D53D0049FC7A /* VersionChanges.swift */; };
 		F1A61F5E2A73D6910049FC7A /* RankingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61F5D2A73D6910049FC7A /* RankingView.swift */; };
 		F1A61F602A73DA0D0049FC7A /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61F5F2A73DA0D0049FC7A /* BarView.swift */; };
+		F1AA4A052A7BDDFF00DEF43C /* FirstLaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA4A042A7BDDFF00DEF43C /* FirstLaunchScreen.swift */; };
+		F1AA4A072A7BDF1D00DEF43C /* UpdateScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA4A062A7BDF1D00DEF43C /* UpdateScreen.swift */; };
 		F1BB331B2A72B2940035DDA4 /* EditEntrysScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BB331A2A72B2940035DDA4 /* EditEntrysScreen.swift */; };
 		F1C2AD532A718A7500DE679D /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C2AD522A718A7500DE679D /* SettingsScreen.swift */; };
 /* End PBXBuildFile section */
@@ -88,6 +90,8 @@
 		F1A61F5B2A73D53D0049FC7A /* VersionChanges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionChanges.swift; sourceTree = "<group>"; };
 		F1A61F5D2A73D6910049FC7A /* RankingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingView.swift; sourceTree = "<group>"; };
 		F1A61F5F2A73DA0D0049FC7A /* BarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
+		F1AA4A042A7BDDFF00DEF43C /* FirstLaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLaunchScreen.swift; sourceTree = "<group>"; };
+		F1AA4A062A7BDF1D00DEF43C /* UpdateScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateScreen.swift; sourceTree = "<group>"; };
 		F1BB331A2A72B2940035DDA4 /* EditEntrysScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEntrysScreen.swift; sourceTree = "<group>"; };
 		F1C2AD522A718A7500DE679D /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,6 +140,8 @@
 				F10CDF7F2A701BBA00DD2F88 /* RootScreenModel.swift */,
 				F1C2AD522A718A7500DE679D /* SettingsScreen.swift */,
 				F1BB331A2A72B2940035DDA4 /* EditEntrysScreen.swift */,
+				F1AA4A042A7BDDFF00DEF43C /* FirstLaunchScreen.swift */,
+				F1AA4A062A7BDF1D00DEF43C /* UpdateScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -397,6 +403,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F10CDF822A701E9000DD2F88 /* YearSelector.swift in Sources */,
+				F1AA4A052A7BDDFF00DEF43C /* FirstLaunchScreen.swift in Sources */,
 				F1A61F5E2A73D6910049FC7A /* RankingView.swift in Sources */,
 				F1C2AD532A718A7500DE679D /* SettingsScreen.swift in Sources */,
 				F1A61ED02A70096D006E7382 /* Type+CoreDataProperties.swift in Sources */,
@@ -409,6 +416,7 @@
 				F1BB331B2A72B2940035DDA4 /* EditEntrysScreen.swift in Sources */,
 				F1A61ED42A7012CD006E7382 /* Date.swift in Sources */,
 				F19E69352A68109C0018E2CE /* Lotus.xcdatamodeld in Sources */,
+				F1AA4A072A7BDF1D00DEF43C /* UpdateScreen.swift in Sources */,
 				F1A61EC32A7008F2006E7382 /* CoreDataStack.swift in Sources */,
 				F19E69292A68109B0018E2CE /* LotusApp.swift in Sources */,
 				F19E695D2A68155B0018E2CE /* ColorExtension.swift in Sources */,

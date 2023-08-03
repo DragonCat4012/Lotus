@@ -15,6 +15,7 @@ struct LotusApp: App {
         WindowGroup {
             RootScreen()
                 .environmentObject(vm)
+                .onAppear(perform: vm.checkIfFirstLaunch)
         }
     }
 }

@@ -12,6 +12,18 @@ class RootScreenModel: ObservableObject {
     @Published var isAddEntryScreenPresented = false
     @Published var isSettingsScreenPresented = false
     @Published var isEditEntriesScreenPresented = false
+    
+    @Published var isFirstLaunchScreenPresented = false
+    @Published var isUpdateScreenPresented = false
+    
+    func checkIfFirstLaunch() {
+        if isFirstLaunch() {
+            isFirstLaunchScreenPresented = true
+        } else if !isLatestVersion() {
+            isUpdateScreenPresented = true
+            setLatestVersion()
+        }
+    }
 
     func onAppear() {
         getHighestRanks()
