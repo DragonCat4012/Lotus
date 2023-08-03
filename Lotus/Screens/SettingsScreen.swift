@@ -14,11 +14,11 @@ struct SettingsScreen: View {
         List {
             
             if vm.editTypePresented {
-                Section("Edit Type") {
-                    TextField("Typename", text: $vm.editTypeNme)
-                    ColorPicker("Shape 1 color", selection: $vm.editSelectedColor, supportsOpacity: false)
+                Section("settings_SectionEditTypes_title") {
+                    TextField("settings_SectionEditTypes_typename", text: $vm.editTypeNme)
+                    ColorPicker("settings_SectionEditTypes_color", selection: $vm.editSelectedColor, supportsOpacity: false)
                     
-                    Button("save changes") {
+                    Button("settings_SectionEditTypes_saveButtonTitle") {
                         vm.saveTypeChanges()
                     }.listRowBackground(Color.primary).foregroundColor(Color.white)
                 }
@@ -53,18 +53,18 @@ struct SettingsScreen: View {
                     }
                 }
                 
-                Button("Add new type") {
+                Button("settings_addnewtype") {
                     vm.addType()
                 }.listRowBackground(Color.primary).foregroundColor(Color.white)
                 
             } header: {
-                Text("All Types")
+                Text("settings_section_alltypes")
             } footer: {
-                Text("Swipe to edit types")
+                Text("settings_section_alltypes_footer")
             }
             
             Section {
-                Button("Edit entrys") {
+                Button("settings_section_editEntrys") {
                     vm.isEditEntriesScreenPresented = true
                 }
             } footer: {

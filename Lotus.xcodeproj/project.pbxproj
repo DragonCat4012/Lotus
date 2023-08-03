@@ -34,6 +34,7 @@
 		F1A61F5C2A73D53D0049FC7A /* VersionChanges.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61F5B2A73D53D0049FC7A /* VersionChanges.swift */; };
 		F1A61F5E2A73D6910049FC7A /* RankingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61F5D2A73D6910049FC7A /* RankingView.swift */; };
 		F1A61F602A73DA0D0049FC7A /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61F5F2A73DA0D0049FC7A /* BarView.swift */; };
+		F1AA4A0A2A7BE19100DEF43C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F1AA4A0C2A7BE19100DEF43C /* Localizable.strings */; };
 		F1BB331B2A72B2940035DDA4 /* EditEntrysScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BB331A2A72B2940035DDA4 /* EditEntrysScreen.swift */; };
 		F1C2AD532A718A7500DE679D /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C2AD522A718A7500DE679D /* SettingsScreen.swift */; };
 /* End PBXBuildFile section */
@@ -88,6 +89,8 @@
 		F1A61F5B2A73D53D0049FC7A /* VersionChanges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionChanges.swift; sourceTree = "<group>"; };
 		F1A61F5D2A73D6910049FC7A /* RankingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingView.swift; sourceTree = "<group>"; };
 		F1A61F5F2A73DA0D0049FC7A /* BarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
+		F1AA4A0B2A7BE19100DEF43C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F1AA4A0D2A7BE19D00DEF43C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F1BB331A2A72B2940035DDA4 /* EditEntrysScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEntrysScreen.swift; sourceTree = "<group>"; };
 		F1C2AD522A718A7500DE679D /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,6 +177,7 @@
 				F19E69362A68109C0018E2CE /* Info.plist */,
 				F19E69332A68109C0018E2CE /* Lotus.xcdatamodeld */,
 				F19E692E2A68109C0018E2CE /* Preview Content */,
+				F1AA4A0C2A7BE19100DEF43C /* Localizable.strings */,
 			);
 			path = Lotus;
 			sourceTree = "<group>";
@@ -332,6 +336,7 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = F19E691C2A68109B0018E2CE;
 			productRefGroup = F19E69262A68109B0018E2CE /* Products */;
@@ -351,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F19E69302A68109C0018E2CE /* Preview Assets.xcassets in Resources */,
+				F1AA4A0A2A7BE19100DEF43C /* Localizable.strings in Resources */,
 				F19E692D2A68109C0018E2CE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -455,11 +461,24 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		F1AA4A0C2A7BE19100DEF43C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F1AA4A0B2A7BE19100DEF43C /* en */,
+				F1AA4A0D2A7BE19D00DEF43C /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		F19E694D2A68109D0018E2CE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -520,6 +539,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -582,6 +602,8 @@
 				DEVELOPMENT_TEAM = 93TVBDWQK4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Lotus;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -591,7 +613,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "akora-studios.Lotus";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -612,6 +634,8 @@
 				DEVELOPMENT_TEAM = 93TVBDWQK4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Lotus;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -621,7 +645,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "akora-studios.Lotus";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

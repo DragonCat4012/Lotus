@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  Lotus
+
+  Created by Kiara on 03.08.23.
+  
+*/
+"addEntry_title"="New Entry";
+"addEntry_datePickerTitle"="Pick a date";
+"addEntry_type"="Choose a type";
+"addEntry_addButtonTitle"="Add";
+
+"settings_SectionEditTypes_title"="Edit Type";
+"settings_SectionEditTypes_typename"="Typename";
+"settings_SectionEditTypes_color"="Typecolor";
+"settings_SectionEditTypes_saveButtonTitle"="save changes";
+"settings_addnewtype"="Add new type";
+"settings_section_alltypes"="All Types";
+"settings_section_alltypes_footer"="Swipe to edit types";
+"settings_section_editEntrys"="Edit entrys";
+
+"editEntrys_title"="All Entries";
+"editEntrys_footer"="Swipe to delete entry";
