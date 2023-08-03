@@ -46,6 +46,12 @@ struct RootScreen: View {
                 .sheet(isPresented: $vm.isSettingsScreenPresented) {
                     SettingsScreen()
                 }
+                .sheet(isPresented: $vm.isFirstLaunchScreenPresented) {
+                    FirstLaunchScreen()
+                }
+                .sheet(isPresented: $vm.isUpdateScreenPresented) {
+                    UpdateScreen()
+                }
         }.navigationTitle("hmmm").onAppear(perform: vm.onAppear)
     }
     
