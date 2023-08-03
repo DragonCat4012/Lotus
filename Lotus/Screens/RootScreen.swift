@@ -47,6 +47,12 @@ struct RootScreen: View {
                     SettingsScreen()
                 }
         }.onAppear(perform: vm.onAppear)
+                .sheet(isPresented: $vm.isFirstLaunchScreenPresented) {
+                    FirstLaunchScreen()
+                }
+                .sheet(isPresented: $vm.isUpdateScreenPresented) {
+                    UpdateScreen()
+                }
     }
     
     func actionRow() -> some View {
