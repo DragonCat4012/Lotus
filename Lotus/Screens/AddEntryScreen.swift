@@ -14,13 +14,13 @@ struct AddEntryScreen: View {
     var body: some View {
         
         VStack {
-            Text("Neuer Eintrag")
+            Text("addEntry_title")
                 .font(.title)
             
-            DatePicker("Pick a date uwu", selection: $selectedDate, displayedComponents: [.date])
+            DatePicker("addEntry_datePickerTitle", selection: $selectedDate, displayedComponents: [.date])
                 .datePickerStyle(GraphicalDatePickerStyle())
             
-            Text("type")
+            Text("addEntry_type")
                 .frame(maxWidth: .infinity)
                 .foregroundColor(.gray)
             // TODO: align left
@@ -44,7 +44,7 @@ struct AddEntryScreen: View {
                 }
             }.padding(.bottom)
             
-            Button("Hinzufügen") {
+            Button("addEntry_addButtonTitle") {
                 CoreData.addItem(date: selectedDate, type: vm.selectedType.rawValue)
                 vm.isAddEntryScreenPresented = false
             }.buttonStyle(PrimaryStyle())

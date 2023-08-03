@@ -28,9 +28,9 @@ struct EditEntrysScreen: View {
                 }
             }
         header: {
-            Text("All Entries")
+            Text("editEntrys_title")
         } footer: {
-            Text("Swipe to delete entry")
+            Text("editEntrys_footer")
         }
         }
     }

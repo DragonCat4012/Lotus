@@ -46,13 +46,13 @@ struct RootScreen: View {
                 .sheet(isPresented: $vm.isSettingsScreenPresented) {
                     SettingsScreen()
                 }
+        }.onAppear(perform: vm.onAppear)
                 .sheet(isPresented: $vm.isFirstLaunchScreenPresented) {
                     FirstLaunchScreen()
                 }
                 .sheet(isPresented: $vm.isUpdateScreenPresented) {
                     UpdateScreen()
                 }
-        }.navigationTitle("hmmm").onAppear(perform: vm.onAppear)
     }
     
     func actionRow() -> some View {
@@ -70,7 +70,7 @@ struct RootScreen: View {
     
     func header() -> some View {
         VStack {
-            Text("Welcome Back")
+            Text("mainScreen_title")
                 .foregroundColor(.white).font(.title)
                 .padding()
                 .padding(.top, 50)
@@ -82,7 +82,7 @@ struct RootScreen: View {
     
     func buttons() -> some View {
         VStack {
-            Button("Settings") {
+            Button("mainScreen_settingsTitle") {
                 vm.isSettingsScreenPresented = true
             }.buttonStyle(PrimaryStyle())
         }.padding()
