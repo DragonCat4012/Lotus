@@ -22,8 +22,8 @@ final class CoreDataStack {
     
     init() {}
     
-    lazy private var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "Lotus")
+    lazy private var persistentContainer: NSPersistentCloudKitContainer = {
+        let container = NSPersistentCloudKitContainer(name: "Lotus")
         
       //  let storeURL = URL.storeURL()
         let documentsDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
@@ -32,8 +32,10 @@ final class CoreDataStack {
 
         storeDescription.shouldInferMappingModelAutomatically = false
         storeDescription.shouldMigrateStoreAutomatically = true
+        storeDescription.cloudKitContainerOptions = NSPersistentCloudKitContainerOptions(containerIdentifier: "iCloud.lotus")
         container.persistentStoreDescriptions = [storeDescription]
         
+        container.viewContext.automaticallyMergesChangesFromParent = true //hmmmmmm
         container.loadPersistentStores(completionHandler: { (_, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
