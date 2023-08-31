@@ -123,7 +123,7 @@ class RootScreenModel: ObservableObject {
         
         var components = DateComponents()
         components.year = Int(selectedYear)
-        components.month = month
+        components.month = month + 1
         components.day = day
         let targetDate = Calendar.current.date(from: components)!.cleanDate()
         
