@@ -1,6 +1,5 @@
 # Lotus
 [![Size](https://img.shields.io/github/repo-size/DragonCat4012/Lotus?color=3a7869&label=SIZE&style=for-the-badge)](https://github.com/DragonCat4012/Lotus)
-[![Version](https://img.shields.io/github/v/release/DragonCat4012/Lotus?color=3a7869&label=Version&style=for-the-badge)](https://github.com/DragonCat4012/Lotus)
 [![Issues](https://img.shields.io/github/issues/DragonCat4012/Lotus?color=3a7869&label=Issues&style=for-the-badge)](https://github.com/DragonCat4012/Lotus)
 [![Last Commit](https://img.shields.io/github/last-commit/DragonCat4012/Lotus/main?color=3a7869&label=lastcommit&style=for-the-badge)](https://github.com/DragonCat4012/Lotus)
 
