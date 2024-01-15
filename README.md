@@ -46,4 +46,4 @@ git clone https://github.com/DragonCat4012/Lotus
 
 # License
 
-Calq is available under the MIT license. See the [LICENSE](https://github.com/DragonCat4012/Lotus/blob/main/LICENSE) file for more info.
+Lotus is available under the MIT license. See the [LICENSE](https://github.com/DragonCat4012/Lotus/blob/main/LICENSE) file for more info.
