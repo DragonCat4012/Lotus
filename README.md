@@ -15,7 +15,7 @@ Background Image Source: https://unsplash.com/de/fotos/xljtGZ2-P3Y
 <img src="https://kiarar.moe/images/lotus/lotus1.png" width="310" height="670">
 <img src="https://kiarar.moe/images/lotus/lotus4.png" width="310" height="670">
 
-<img src="https://kiarar.moe/images/lotus/lotus2.png" width="310" height="670">ght=909)
+<img src="https://kiarar.moe/images/lotus/lotus2.png" width="310" height="670">
 <img src="https://kiarar.moe/images/lotus/lotus3.png" width="310" height="670">
 </details>
 
