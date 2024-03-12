@@ -11,6 +11,23 @@
 		F10CDF802A701BBA00DD2F88 /* RootScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CDF7F2A701BBA00DD2F88 /* RootScreenModel.swift */; };
 		F10CDF822A701E9000DD2F88 /* YearSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CDF812A701E9000DD2F88 /* YearSelector.swift */; };
 		F10CDF842A70216F00DD2F88 /* RoundedViewCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CDF832A70216F00DD2F88 /* RoundedViewCorners.swift */; };
+		F12210782BA04F1A00DC19F0 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F12210772BA04F1A00DC19F0 /* WidgetKit.framework */; };
+		F122107A2BA04F1A00DC19F0 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F12210792BA04F1A00DC19F0 /* SwiftUI.framework */; };
+		F122107D2BA04F1A00DC19F0 /* LotusWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F122107C2BA04F1A00DC19F0 /* LotusWidgetBundle.swift */; };
+		F122107F2BA04F1A00DC19F0 /* LotusWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F122107E2BA04F1A00DC19F0 /* LotusWidget.swift */; };
+		F12210812BA04F1B00DC19F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F12210802BA04F1B00DC19F0 /* Assets.xcassets */; };
+		F12210852BA04F1B00DC19F0 /* LotusWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F12210752BA04F1A00DC19F0 /* LotusWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F122108B2BA050F500DC19F0 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61EC42A70093C006E7382 /* CoreDataManager.swift */; };
+		F122108C2BA0510100DC19F0 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61EC22A7008F2006E7382 /* CoreDataStack.swift */; };
+		F122108D2BA0510400DC19F0 /* Year+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61EC82A70096D006E7382 /* Year+CoreDataProperties.swift */; };
+		F122108E2BA0510600DC19F0 /* Year+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61EC72A70096D006E7382 /* Year+CoreDataClass.swift */; };
+		F122108F2BA0510800DC19F0 /* MoodEntry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61ED72A701572006E7382 /* MoodEntry+CoreDataProperties.swift */; };
+		F12210902BA0510B00DC19F0 /* MoodEntry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61ED62A701572006E7382 /* MoodEntry+CoreDataClass.swift */; };
+		F12210912BA0510D00DC19F0 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B2C4D22BA0438A0064DCF2 /* Category+CoreDataProperties.swift */; };
+		F12210922BA0510F00DC19F0 /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B2C4D12BA0438A0064DCF2 /* Category+CoreDataClass.swift */; };
+		F12210952BA0518F00DC19F0 /* CalendarView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12210932BA0517600DC19F0 /* CalendarView2.swift */; };
+		F12210962BA051D300DC19F0 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61ED32A7012CD006E7382 /* Date.swift */; };
+		F12210972BA051F900DC19F0 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19E695C2A68155B0018E2CE /* ColorExtension.swift */; };
 		F19BBF202A682F930030F090 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19BBF1F2A682F930030F090 /* CalendarView.swift */; };
 		F19E69292A68109B0018E2CE /* LotusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19E69282A68109B0018E2CE /* LotusApp.swift */; };
 		F19E692D2A68109C0018E2CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F19E692C2A68109C0018E2CE /* Assets.xcassets */; };
@@ -27,8 +44,8 @@
 		F1A61ECD2A70096D006E7382 /* Year+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61EC72A70096D006E7382 /* Year+CoreDataClass.swift */; };
 		F1A61ECE2A70096D006E7382 /* Year+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61EC82A70096D006E7382 /* Year+CoreDataProperties.swift */; };
 		F1A61ED42A7012CD006E7382 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61ED32A7012CD006E7382 /* Date.swift */; };
-		F1A61ED82A701572006E7382 /* Entry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61ED62A701572006E7382 /* Entry+CoreDataClass.swift */; };
-		F1A61ED92A701572006E7382 /* Entry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61ED72A701572006E7382 /* Entry+CoreDataProperties.swift */; };
+		F1A61ED82A701572006E7382 /* MoodEntry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61ED62A701572006E7382 /* MoodEntry+CoreDataClass.swift */; };
+		F1A61ED92A701572006E7382 /* MoodEntry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61ED72A701572006E7382 /* MoodEntry+CoreDataProperties.swift */; };
 		F1A61F5C2A73D53D0049FC7A /* VersionChanges.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61F5B2A73D53D0049FC7A /* VersionChanges.swift */; };
 		F1A61F5E2A73D6910049FC7A /* RankingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61F5D2A73D6910049FC7A /* RankingView.swift */; };
 		F1A61F602A73DA0D0049FC7A /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61F5F2A73DA0D0049FC7A /* BarView.swift */; };
@@ -42,6 +59,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		F12210832BA04F1B00DC19F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F19E691D2A68109B0018E2CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F12210742BA04F1A00DC19F0;
+			remoteInfo = LotusWidgetExtension;
+		};
 		F19E693C2A68109D0018E2CE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F19E691D2A68109B0018E2CE /* Project object */;
@@ -58,11 +82,34 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F12210862BA04F1B00DC19F0 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F12210852BA04F1B00DC19F0 /* LotusWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		F10CDF7D2A7019C400DD2F88 /* AddEntryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEntryScreen.swift; sourceTree = "<group>"; };
 		F10CDF7F2A701BBA00DD2F88 /* RootScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreenModel.swift; sourceTree = "<group>"; };
 		F10CDF812A701E9000DD2F88 /* YearSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearSelector.swift; sourceTree = "<group>"; };
 		F10CDF832A70216F00DD2F88 /* RoundedViewCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViewCorners.swift; sourceTree = "<group>"; };
+		F12210752BA04F1A00DC19F0 /* LotusWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LotusWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F12210772BA04F1A00DC19F0 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		F12210792BA04F1A00DC19F0 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		F122107C2BA04F1A00DC19F0 /* LotusWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotusWidgetBundle.swift; sourceTree = "<group>"; };
+		F122107E2BA04F1A00DC19F0 /* LotusWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotusWidget.swift; sourceTree = "<group>"; };
+		F12210802BA04F1B00DC19F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F12210822BA04F1B00DC19F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F12210932BA0517600DC19F0 /* CalendarView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView2.swift; sourceTree = "<group>"; };
+		F12210982BA0531D00DC19F0 /* LotusWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LotusWidgetExtension.entitlements; sourceTree = "<group>"; };
 		F19BBF1F2A682F930030F090 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		F19E69252A68109B0018E2CE /* Lotus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lotus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F19E69282A68109B0018E2CE /* LotusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotusApp.swift; sourceTree = "<group>"; };
@@ -84,8 +131,8 @@
 		F1A61EC82A70096D006E7382 /* Year+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Year+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		F1A61ED32A7012CD006E7382 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		F1A61ED52A70151A006E7382 /* Lotus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lotus.entitlements; sourceTree = "<group>"; };
-		F1A61ED62A701572006E7382 /* Entry+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		F1A61ED72A701572006E7382 /* Entry+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		F1A61ED62A701572006E7382 /* MoodEntry+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoodEntry+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		F1A61ED72A701572006E7382 /* MoodEntry+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoodEntry+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		F1A61F5B2A73D53D0049FC7A /* VersionChanges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionChanges.swift; sourceTree = "<group>"; };
 		F1A61F5D2A73D6910049FC7A /* RankingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingView.swift; sourceTree = "<group>"; };
 		F1A61F5F2A73DA0D0049FC7A /* BarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
@@ -100,6 +147,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F12210722BA04F1A00DC19F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F122107A2BA04F1A00DC19F0 /* SwiftUI.framework in Frameworks */,
+				F12210782BA04F1A00DC19F0 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F19E69222A68109B0018E2CE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,6 +180,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F12210762BA04F1A00DC19F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F12210772BA04F1A00DC19F0 /* WidgetKit.framework */,
+				F12210792BA04F1A00DC19F0 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F122107B2BA04F1A00DC19F0 /* LotusWidget */ = {
+			isa = PBXGroup;
+			children = (
+				F122107C2BA04F1A00DC19F0 /* LotusWidgetBundle.swift */,
+				F122107E2BA04F1A00DC19F0 /* LotusWidget.swift */,
+				F12210802BA04F1B00DC19F0 /* Assets.xcassets */,
+				F12210822BA04F1B00DC19F0 /* Info.plist */,
+				F12210932BA0517600DC19F0 /* CalendarView2.swift */,
+			);
+			path = LotusWidget;
+			sourceTree = "<group>";
+		};
 		F19BBF212A682F990030F090 /* UI Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,9 +229,12 @@
 		F19E691C2A68109B0018E2CE = {
 			isa = PBXGroup;
 			children = (
+				F12210982BA0531D00DC19F0 /* LotusWidgetExtension.entitlements */,
 				F19E69272A68109B0018E2CE /* Lotus */,
 				F19E693E2A68109D0018E2CE /* LotusTests */,
 				F19E69482A68109D0018E2CE /* LotusUITests */,
+				F122107B2BA04F1A00DC19F0 /* LotusWidget */,
+				F12210762BA04F1A00DC19F0 /* Frameworks */,
 				F19E69262A68109B0018E2CE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -165,6 +245,7 @@
 				F19E69252A68109B0018E2CE /* Lotus.app */,
 				F19E693B2A68109D0018E2CE /* LotusTests.xctest */,
 				F19E69452A68109D0018E2CE /* LotusUITests.xctest */,
+				F12210752BA04F1A00DC19F0 /* LotusWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -247,8 +328,8 @@
 			children = (
 				F1B2C4D12BA0438A0064DCF2 /* Category+CoreDataClass.swift */,
 				F1B2C4D22BA0438A0064DCF2 /* Category+CoreDataProperties.swift */,
-				F1A61ED62A701572006E7382 /* Entry+CoreDataClass.swift */,
-				F1A61ED72A701572006E7382 /* Entry+CoreDataProperties.swift */,
+				F1A61ED62A701572006E7382 /* MoodEntry+CoreDataClass.swift */,
+				F1A61ED72A701572006E7382 /* MoodEntry+CoreDataProperties.swift */,
 				F1A61EC72A70096D006E7382 /* Year+CoreDataClass.swift */,
 				F1A61EC82A70096D006E7382 /* Year+CoreDataProperties.swift */,
 			);
@@ -258,6 +339,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F12210742BA04F1A00DC19F0 /* LotusWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F12210892BA04F1B00DC19F0 /* Build configuration list for PBXNativeTarget "LotusWidgetExtension" */;
+			buildPhases = (
+				F12210712BA04F1A00DC19F0 /* Sources */,
+				F12210722BA04F1A00DC19F0 /* Frameworks */,
+				F12210732BA04F1A00DC19F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LotusWidgetExtension;
+			productName = LotusWidgetExtension;
+			productReference = F12210752BA04F1A00DC19F0 /* LotusWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		F19E69242A68109B0018E2CE /* Lotus */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F19E694F2A68109D0018E2CE /* Build configuration list for PBXNativeTarget "Lotus" */;
@@ -266,10 +364,12 @@
 				F19E69222A68109B0018E2CE /* Frameworks */,
 				F19E69232A68109B0018E2CE /* Resources */,
 				F1A61F612A73E8430049FC7A /* ShellScript */,
+				F12210862BA04F1B00DC19F0 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F12210842BA04F1B00DC19F0 /* PBXTargetDependency */,
 			);
 			name = Lotus;
 			productName = Lotus;
@@ -322,6 +422,9 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					F12210742BA04F1A00DC19F0 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
 					F19E69242A68109B0018E2CE = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
@@ -352,11 +455,20 @@
 				F19E69242A68109B0018E2CE /* Lotus */,
 				F19E693A2A68109D0018E2CE /* LotusTests */,
 				F19E69442A68109D0018E2CE /* LotusUITests */,
+				F12210742BA04F1A00DC19F0 /* LotusWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F12210732BA04F1A00DC19F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F12210812BA04F1B00DC19F0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F19E69232A68109B0018E2CE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -404,6 +516,26 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F12210712BA04F1A00DC19F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F122108C2BA0510100DC19F0 /* CoreDataStack.swift in Sources */,
+				F122107D2BA04F1A00DC19F0 /* LotusWidgetBundle.swift in Sources */,
+				F12210922BA0510F00DC19F0 /* Category+CoreDataClass.swift in Sources */,
+				F122107F2BA04F1A00DC19F0 /* LotusWidget.swift in Sources */,
+				F122108E2BA0510600DC19F0 /* Year+CoreDataClass.swift in Sources */,
+				F12210902BA0510B00DC19F0 /* MoodEntry+CoreDataClass.swift in Sources */,
+				F122108B2BA050F500DC19F0 /* CoreDataManager.swift in Sources */,
+				F12210962BA051D300DC19F0 /* Date.swift in Sources */,
+				F122108D2BA0510400DC19F0 /* Year+CoreDataProperties.swift in Sources */,
+				F12210912BA0510D00DC19F0 /* Category+CoreDataProperties.swift in Sources */,
+				F122108F2BA0510800DC19F0 /* MoodEntry+CoreDataProperties.swift in Sources */,
+				F12210952BA0518F00DC19F0 /* CalendarView2.swift in Sources */,
+				F12210972BA051F900DC19F0 /* ColorExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F19E69212A68109B0018E2CE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -416,7 +548,7 @@
 				F1A61ECD2A70096D006E7382 /* Year+CoreDataClass.swift in Sources */,
 				F1B2C4D42BA0438A0064DCF2 /* Category+CoreDataProperties.swift in Sources */,
 				F19E695B2A6813840018E2CE /* ButtonStyles.swift in Sources */,
-				F1A61ED82A701572006E7382 /* Entry+CoreDataClass.swift in Sources */,
+				F1A61ED82A701572006E7382 /* MoodEntry+CoreDataClass.swift in Sources */,
 				F19BBF202A682F930030F090 /* CalendarView.swift in Sources */,
 				F1A61ECE2A70096D006E7382 /* Year+CoreDataProperties.swift in Sources */,
 				F1BB331B2A72B2940035DDA4 /* EditEntrysScreen.swift in Sources */,
@@ -429,7 +561,7 @@
 				F19E695D2A68155B0018E2CE /* ColorExtension.swift in Sources */,
 				F10CDF7E2A7019C400DD2F88 /* AddEntryScreen.swift in Sources */,
 				F19E69592A6813340018E2CE /* RootScreen.swift in Sources */,
-				F1A61ED92A701572006E7382 /* Entry+CoreDataProperties.swift in Sources */,
+				F1A61ED92A701572006E7382 /* MoodEntry+CoreDataProperties.swift in Sources */,
 				F1A61EC52A70093C006E7382 /* CoreDataManager.swift in Sources */,
 				F1A61F5C2A73D53D0049FC7A /* VersionChanges.swift in Sources */,
 				F10CDF802A701BBA00DD2F88 /* RootScreenModel.swift in Sources */,
@@ -457,6 +589,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		F12210842BA04F1B00DC19F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F12210742BA04F1A00DC19F0 /* LotusWidgetExtension */;
+			targetProxy = F12210832BA04F1B00DC19F0 /* PBXContainerItemProxy */;
+		};
 		F19E693D2A68109D0018E2CE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F19E69242A68109B0018E2CE /* Lotus */;
@@ -482,6 +619,64 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F12210872BA04F1B00DC19F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = LotusWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 93TVBDWQK4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LotusWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LotusWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "akora-studios.Lotus.LotusWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F12210882BA04F1B00DC19F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = LotusWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 93TVBDWQK4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LotusWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LotusWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "akora-studios.Lotus.LotusWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		F19E694D2A68109D0018E2CE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -601,6 +796,7 @@
 		F19E69502A68109D0018E2CE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Lotus/Lotus.entitlements;
@@ -633,6 +829,7 @@
 		F19E69512A68109D0018E2CE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Lotus/Lotus.entitlements;
@@ -741,6 +938,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F12210892BA04F1B00DC19F0 /* Build configuration list for PBXNativeTarget "LotusWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F12210872BA04F1B00DC19F0 /* Debug */,
+				F12210882BA04F1B00DC19F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F19E69202A68109B0018E2CE /* Build configuration list for PBXProject "Lotus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

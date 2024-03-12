@@ -5,13 +5,13 @@
         <attribute name="name" attributeType="String" defaultValueString="name"/>
         <attribute name="rawValue" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
-    <entity name="Entry" representedClassName="Entry" syncable="YES">
+    <entity name="MoodEntry" representedClassName="MoodEntry" syncable="YES">
         <attribute name="timestamp" attributeType="Date" defaultDateTimeInterval="711985560" usesScalarValueType="NO"/>
         <attribute name="value" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="year" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Year" inverseName="items" inverseEntity="Year"/>
     </entity>
     <entity name="Year" representedClassName="Year" syncable="YES">
         <attribute name="year" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Entry" inverseName="year" inverseEntity="Entry"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MoodEntry" inverseName="year" inverseEntity="MoodEntry"/>
     </entity>
 </model>

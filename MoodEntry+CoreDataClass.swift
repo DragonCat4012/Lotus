@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-@objc(Entry)
-public class Entry: NSManagedObject {
+@objc(MoodEntry )
+public class MoodEntry: NSManagedObject {
 
 }

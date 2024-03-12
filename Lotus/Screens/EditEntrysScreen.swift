@@ -40,7 +40,7 @@ struct EditEntrysScreen: View {
         }
     }
     
-    func typeView(_ entry: Entry) -> some View {
+    func typeView(_ entry: MoodEntry) -> some View {
         ZStack {
             RoundedRectangle(cornerRadius: 8)
                 .fill(vm.getColorForEntry(entry))

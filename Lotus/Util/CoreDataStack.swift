@@ -25,16 +25,16 @@ final class CoreDataStack {
     lazy private var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "Lotus")
         
-      //  let storeURL = URL.storeURL()
-        let documentsDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        let persistentStoreURL = documentsDirectoryURL.appendingPathComponent("Lotus.sqlite")
-        let storeDescription = NSPersistentStoreDescription(url: persistentStoreURL)
+        let storeURL = URL.storeURL()
+       // let documentsDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+       // let persistentStoreURL = documentsDirectoryURL.appendingPathComponent("Lotus.sqlite")
+        let storeDescription = NSPersistentStoreDescription(url: storeURL)
 
         storeDescription.shouldInferMappingModelAutomatically = false
         storeDescription.shouldMigrateStoreAutomatically = true
         container.persistentStoreDescriptions = [storeDescription]
         
-        container.loadPersistentStores(completionHandler: { (_, error) in
+        container.loadPersistentStores(completionHandler: { (e11, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
@@ -46,9 +46,9 @@ final class CoreDataStack {
 public extension URL {
     
     static func storeURL() -> URL {
-        guard let fileContainer = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.Lotus") else {
+        guard let fileContainer = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.akora.lotus") else {
             fatalError("Shared file container could not be created")
         }
-        return fileContainer.appendingPathComponent("Model.sqlite")
+        return fileContainer.appendingPathComponent("Lotus.sqlite")
     }
 }

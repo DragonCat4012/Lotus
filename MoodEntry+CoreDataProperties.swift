@@ -10,10 +10,10 @@ import Foundation
 import CoreData
 
 
-extension Entry {
+extension MoodEntry {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Entry> {
-        return NSFetchRequest<Entry>(entityName: "Entry")
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<MoodEntry> {
+        return NSFetchRequest<MoodEntry>(entityName: "MoodEntry")
     }
 
     @NSManaged public var timestamp: Date
@@ -22,6 +22,6 @@ extension Entry {
 
 }
 
-extension Entry : Identifiable {
+extension MoodEntry : Identifiable {
 
 }
