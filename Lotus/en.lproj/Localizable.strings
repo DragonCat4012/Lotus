@@ -10,6 +10,8 @@
 "addEntry_type"="Choose a type";
 "addEntry_addButtonTitle"="Add";
 
+"settings_SectionEditTypes_exampleCount"="Count";
+"settings_SectionEditTypes_exampleName"="Name";
 "settings_SectionEditTypes_exampleID"="Type ID";
 "settings_SectionEditTypes_exampleDate"="Date";
 "settings_SectionEditTypes_title"="Edit Type";

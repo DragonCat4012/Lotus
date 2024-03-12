@@ -25,11 +25,15 @@ struct SettingsScreen: View {
             }
             
             Section {
+                HStack {
+                    Text("settings_SectionEditTypes_exampleID")
+                    Text("settings_SectionEditTypes_exampleName")
+                    Spacer()
+                    Text("settings_SectionEditTypes_exampleCount")
+                }.foregroundColor(.gray)
                 ForEach(vm.allTypes) { type in
                     HStack {
-                        Text(String(type.rawValue)).foregroundColor(.gray)
-                        Image(systemName: "heart.rectangle.fill")
-                            .foregroundColor(Color(hexString: type.color))
+                        typeView(type)
                         Text(type.name)
                         Spacer()
                         Text(String(vm.getTilesCountForType(type: type)))
@@ -72,6 +76,16 @@ struct SettingsScreen: View {
             }
         }.sheet(isPresented: $vm.isEditEntriesScreenPresented) {
             EditEntrysScreen()
+        }
+    }
+    
+    func typeView(_ entry: Category) -> some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 8)
+                .fill(Color(hexString: entry.color))
+                .frame(width: 35, height: 25)
+            Text(String(entry.rawValue))
+                .frame(width: 35, height: 25)
         }
     }
 }
