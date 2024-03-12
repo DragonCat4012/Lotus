@@ -13,11 +13,16 @@ struct EditEntrysScreen: View {
     var body: some View {
         List {
             Section {
+                HStack {
+                    Text("settings_SectionEditTypes_exampleDate")
+                    Spacer()
+                    Text("settings_SectionEditTypes_exampleID")
+                }.foregroundColor(.gray)
                 ForEach(vm.allEntries) { entry in
                     HStack {
-                        Text(formatDate(entry.timestamp)) // TODO: show colors
+                        Text(formatDate(entry.timestamp))
                         Spacer()
-                        Text(String(entry.value))
+                        typeView(entry)
                     }.swipeActions {
                         Button {
                             vm.deleteEntry(entry)
@@ -32,6 +37,16 @@ struct EditEntrysScreen: View {
         } footer: {
             Text("editEntrys_footer")
         }
+        }
+    }
+    
+    func typeView(_ entry: Entry) -> some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 8)
+                .fill(vm.getColorForEntry(entry))
+                .frame(width: 35, height: 25)
+            Text(String(entry.value))
+                .frame(width: 35, height: 25)
         }
     }
     

@@ -138,6 +138,13 @@ class RootScreenModel: ObservableObject {
         return Color(hexString: type.color)
     }
     
+    func getColorForEntry(_ entry: Entry) -> Color {
+        guard let type = CoreData.getTypes().filter({ $0.rawValue == entry.value}).first else {
+            return Color.white.opacity(0.2)
+        }
+        return Color(hexString: type.color)
+    }
+    
     func getDaysInMonth(month: Int) -> Int {
         let year = Int(selectedYear)
         let calendar = Calendar.current
