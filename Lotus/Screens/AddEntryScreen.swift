@@ -47,6 +47,7 @@ struct AddEntryScreen: View {
             Button("addEntry_addButtonTitle") {
                 CoreData.addItem(date: selectedDate, type: vm.selectedType.rawValue)
                 vm.isAddEntryScreenPresented = false
+                vm.updateView()
             }.buttonStyle(PrimaryStyle())
         }.padding()
     }

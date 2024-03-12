@@ -12,13 +12,13 @@ import UIKit
 struct CoreData {
     static let context = CoreDataStack.sharedContext
     
-    static func getTypes() -> [Type] {
-        var arr: [Type] = []
+    static func getTypes() -> [Category] {
+        var arr: [Category] = []
         do {
-            arr = try context.fetch(Type.fetchRequest())
+            arr = try context.fetch(Category.fetchRequest())
             
             if arr.isEmpty {
-                let newType = Type(context: context)
+                let newType = Category(context: context)
                 newType.rawValue = 0
                 newType.color = "fffddd"
                 try! context.save()
@@ -82,7 +82,7 @@ struct CoreData {
         }
     }
     
-    static func editType(type: Type, color: Color, name: String) {
+    static func editType(type: Category, color: Color, name: String) {
         do {
             type.color = UIColor(color).toHexString()
             type.name = name
@@ -96,7 +96,7 @@ struct CoreData {
     static func addType(color: String = UIColor(Color.primary).toHexString(), name: String = "name") {
         var num: Int64 = 0
         let assignedInts = getTypes().map { $0.rawValue}
-        let newItem = Type(context: context)
+        let newItem = Category(context: context)
         newItem.color = color
         
         repeat {
@@ -115,7 +115,7 @@ struct CoreData {
         // TODO: check for unassigned int
     }
     
-    static func removeType(type: Type) {
+    static func removeType(type: Category) {
         let count = getTypes().count
         
         if count == 1 {

@@ -30,15 +30,15 @@ class RootScreenModel: ObservableObject {
     }
 
     // MARK: ADddEntryScreen
-    @Published var selectedType: Type = CoreData.getTypes().first!
+    @Published var selectedType: Category = CoreData.getTypes().first!
 
     // MARK: EditType
     @Published var editTypePresented = false
-    @Published var selectedTypeToEdit: Type?
+    @Published var selectedTypeToEdit: Category?
     @Published var editSelectedColor: Color = .primary
     @Published var editTypeNme = ""
 
-    func selectTypeToEdit(_ type: Type) {
+    func selectTypeToEdit(_ type: Category) {
         selectedTypeToEdit = type
         editSelectedColor = Color(hexString: type.color)
         editTypeNme = type.name
@@ -68,7 +68,7 @@ class RootScreenModel: ObservableObject {
         allTypes = CoreData.getTypes()
     }
 
-    func removeType(type: Type) {
+    func removeType(type: Category) {
         CoreData.removeType(type: type)
         allTypes = CoreData.getTypes()
     }
@@ -109,7 +109,7 @@ class RootScreenModel: ObservableObject {
         daysForMonth = arr
     }
     
-    func getTilesCountForType(type: Type) -> Int {
+    func getTilesCountForType(type: Category) -> Int {
         return CoreData.getEntrys().filter { $0.value == type.rawValue}.count
     }
     
@@ -170,17 +170,21 @@ class RootScreenModel: ObservableObject {
         var arr: [SortResult] = []
         
         types.forEach { type in
-            arr.append(SortResult(type: type, count: entrys.filter {$0.value == type.rawValue}.count))
+            arr.append(SortResult(category: type, count: entrys.filter {$0.value == type.rawValue}.count))
         }
         
         highestRanks = arr.sorted { $0.count > $1.count }
     }
     
-    func getRank(_ nr: Int) -> (Color, Int) {
+    func getRank(_ nr: Int) -> (Color, String) {
         if highestRanks.count > nr {
-            let color = Color(hexString: highestRanks[nr].type.color)
-            return (color, highestRanks[nr].count)
+            let color = Color(hexString: highestRanks[nr].category.color)
+            return (color, "\(highestRanks[nr].category.rawValue)")
         }
-        return (Color.gray, 0)
+        return (Color.gray, "-")
+    }
+    
+    func updateView() {
+        getHighestRanks()
     }
 }

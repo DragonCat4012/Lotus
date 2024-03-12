@@ -21,19 +21,52 @@ struct BarView: View {
         return GeometryReader { geo in
             let width = geo.size.width
             ZStack(alignment: .leading) {
-                RoundedRectangle(cornerRadius: 8).fill(Color.gray).frame(width: width).frame(height: 20)
+                RoundedCorner(corners: .allRounded, radius: 8)
+                    .fill(Color.gray)
+                    .frame(width: width).frame(height: 20)
                 
                 HStack(spacing: 0) {
                     if maxCount > 0 {
-                        ForEach(vm.highestRanks, id: \.self) { res in
+                        ForEach(Array(vm.highestRanks.enumerated()), id: \.offset) { index, res in
+                            let corners = getCorners(index, vm.highestRanks.count - 1)
                             let percent: Double = Double(res.count) / maxCount
-                            let color = Color(hexString: res.type.color)
-                            RoundedRectangle(cornerRadius: 8).fill(color).frame(width: width * percent).frame(height: 20)
+                            let color = Color(hexString: res.category.color)
+                            
+                            if index == 1 && vm.highestRanks.count == 3 {
+                                Rectangle()
+                                    .fill(color)
+                                    .frame(width: width * percent).frame(height: 20)
+                            } else {
+                                RoundedCorner(corners: corners, radius: 8)
+                                    .fill(color)
+                                    .frame(width: width * percent).frame(height: 20)
+                            }
+                            
                         }
                     }
                 }
             }
         }
         
+    }
+    
+    func getCorners(_ index: Int, _ maxIndex: Int) -> Corners {
+        if maxIndex == 2 { // 3 entries
+            if index == 0 {
+                return .leftRounded
+            } else if index == 1 { // not rounded at all??
+                return .allRounded
+            } else {
+                return .rightRounded
+            }
+        } else if maxIndex == 1 { // 2 entries
+            if index == 0 {
+                return .leftRounded
+            } else {
+                return .rightRounded
+            }
+        } else { // 1 entry
+            return .allRounded
+        }
     }
 }
