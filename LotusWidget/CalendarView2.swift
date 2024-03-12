@@ -12,6 +12,26 @@ struct CalendarView2: View {
     
     var body: some View {
         ZStack {
+            Image("backImage")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .rotationEffect(.degrees(-90))
+                .frame(height: 300)
+                .edgesIgnoringSafeArea(.top)
+            VStack {
+                Text("mainScreen_title")
+                    .foregroundColor(.white).font(.title)
+                    .padding()
+                    .padding(.top, 50)
+                
+             //   calendar()
+               //     .padding()
+            }
+        }
+    }
+    
+    func calendar() -> some View {
+        ZStack {
             RoundedRectangle(cornerRadius: 8)
                 .fill(Color.black.opacity(0.4))
                 .frame(height: 160)
