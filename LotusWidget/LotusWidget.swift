@@ -64,6 +64,7 @@ struct LotusWidget: Widget {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             LotusWidgetEntryView(entry: entry)
         }
+        .supportedFamilies([.systemMedium, .systemLarge])
         .configurationDisplayName("My Widget")
         .description("This is an example widget.")
     }

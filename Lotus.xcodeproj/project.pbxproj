@@ -28,6 +28,7 @@
 		F12210952BA0518F00DC19F0 /* CalendarView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12210932BA0517600DC19F0 /* CalendarView2.swift */; };
 		F12210962BA051D300DC19F0 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61ED32A7012CD006E7382 /* Date.swift */; };
 		F12210972BA051F900DC19F0 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19E695C2A68155B0018E2CE /* ColorExtension.swift */; };
+		F12210992BA0596C00DC19F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F19E692C2A68109C0018E2CE /* Assets.xcassets */; };
 		F19BBF202A682F930030F090 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19BBF1F2A682F930030F090 /* CalendarView.swift */; };
 		F19E69292A68109B0018E2CE /* LotusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19E69282A68109B0018E2CE /* LotusApp.swift */; };
 		F19E692D2A68109C0018E2CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F19E692C2A68109C0018E2CE /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		F1B2C4D32BA0438A0064DCF2 /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B2C4D12BA0438A0064DCF2 /* Category+CoreDataClass.swift */; };
 		F1B2C4D42BA0438A0064DCF2 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B2C4D22BA0438A0064DCF2 /* Category+CoreDataProperties.swift */; };
 		F1BB331B2A72B2940035DDA4 /* EditEntrysScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BB331A2A72B2940035DDA4 /* EditEntrysScreen.swift */; };
+		F1BD157A2BA1C24A00CE570D /* Lotus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F19E69332A68109C0018E2CE /* Lotus.xcdatamodeld */; };
 		F1C2AD532A718A7500DE679D /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C2AD522A718A7500DE679D /* SettingsScreen.swift */; };
 /* End PBXBuildFile section */
 
@@ -465,6 +467,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F12210992BA0596C00DC19F0 /* Assets.xcassets in Resources */,
 				F12210812BA04F1B00DC19F0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -533,6 +536,7 @@
 				F122108F2BA0510800DC19F0 /* MoodEntry+CoreDataProperties.swift in Sources */,
 				F12210952BA0518F00DC19F0 /* CalendarView2.swift in Sources */,
 				F12210972BA051F900DC19F0 /* ColorExtension.swift in Sources */,
+				F1BD157A2BA1C24A00CE570D /* Lotus.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
