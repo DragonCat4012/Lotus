@@ -73,7 +73,7 @@ class RootScreenModel: ObservableObject {
         allTypes = CoreData.getTypes()
     }
 
-    func deleteEntry(_ entry: Entry) {
+    func deleteEntry(_ entry: MoodEntry) {
         CoreData.removeItem(item: entry)
         allEntries = CoreData.getEntrys()
     }
@@ -115,7 +115,7 @@ class RootScreenModel: ObservableObject {
     
     func getColorForDay(_ day: Int, _ month: Int) -> Color {
         let year = CoreData.getYears().filter { $0.year == selectedYear}.first
-        var items: [Entry] = []
+        var items: [MoodEntry] = []
         
         if year != nil {
             items = CoreData.getItemsOfAYear(year: year!)
@@ -138,7 +138,7 @@ class RootScreenModel: ObservableObject {
         return Color(hexString: type.color)
     }
     
-    func getColorForEntry(_ entry: Entry) -> Color {
+    func getColorForEntry(_ entry: MoodEntry) -> Color {
         guard let type = CoreData.getTypes().filter({ $0.rawValue == entry.value}).first else {
             return Color.white.opacity(0.2)
         }

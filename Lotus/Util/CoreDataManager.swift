@@ -51,29 +51,29 @@ struct CoreData {
         return arr
     }
     
-    static func getEntrys() -> [Entry] {
-        var arr: [Entry] = []
+    static func getEntrys() -> [MoodEntry] {
+        var arr: [MoodEntry] = []
         do {
-            arr = try context.fetch(Entry.fetchRequest())
+            arr = try context.fetch(MoodEntry.fetchRequest())
         } catch {
             log("Error getting entrys")
         }
         return arr
     }
     
-    static func getItemsOfAYear(year: Year) -> [Entry] {
-        return (year.items.allObjects as? [Entry])!
+    static func getItemsOfAYear(year: Year) -> [MoodEntry] {
+        return (year.items.allObjects as? [MoodEntry])!
     }
     
     static func addItem(year: Year = getLatestYear(), date: Date, type: Int64) {
-        let newItem = Entry(context: context)
+        let newItem = MoodEntry(context: context)
         newItem.timestamp = date.cleanDate()
         newItem.value = type
         year.addToItems(newItem)
         try! context.save()
     }
     
-    static func removeItem(item: Entry) {
+    static func removeItem(item: MoodEntry) {
         do {
             context.delete(item)
             try context.save()

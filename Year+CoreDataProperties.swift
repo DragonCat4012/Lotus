@@ -25,10 +25,10 @@ extension Year {
 extension Year {
 
     @objc(addItemsObject:)
-    @NSManaged public func addToItems(_ value: Entry)
+    @NSManaged public func addToItems(_ value: MoodEntry)
 
     @objc(removeItemsObject:)
-    @NSManaged public func removeFromItems(_ value: Entry)
+    @NSManaged public func removeFromItems(_ value: MoodEntry)
 
     @objc(addItems:)
     @NSManaged public func addToItems(_ values: NSSet)
