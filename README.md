@@ -3,11 +3,18 @@
 [![Issues](https://img.shields.io/github/issues/DragonCat4012/Lotus?color=3a7869&label=Issues&style=for-the-badge)](https://github.com/DragonCat4012/Lotus)
 [![Last Commit](https://img.shields.io/github/last-commit/DragonCat4012/Lotus/main?color=3a7869&label=lastcommit&style=for-the-badge)](https://github.com/DragonCat4012/Lotus)
 
-iOS Moodtracker (WIP?)
+Simple iOS Moodtracker (WIP?)
 
+## Features
+* create different Moods/topics etc.
+* assign different colors to each mood/topic
+* assign a day a mood
+* statistics about how much each mood was present in a year
+
+## Image Source
 Background Image Source: https://unsplash.com/de/fotos/xljtGZ2-P3Y
 
-# Showcase
+### Showcase
 <details open>
 <summary>Showcase</summary>
 <br>
@@ -24,7 +31,7 @@ Background Image Source: https://unsplash.com/de/fotos/xljtGZ2-P3Y
 - iOS 15.0+
 - Xcode 13.0+
 
-[For mroe infos looke here: Xcode Support](https://developer.apple.com/support/xcode/)
+[For more infos look here: Xcode Support](https://developer.apple.com/support/xcode/)
 
 
 ## How to Install and Run the Project
@@ -43,6 +50,6 @@ git clone https://github.com/DragonCat4012/Lotus
 </a>
 
 
-# License
+## License
 
 Lotus is available under the MIT license. See the [LICENSE](https://github.com/DragonCat4012/Lotus/blob/main/LICENSE) file for more info.
